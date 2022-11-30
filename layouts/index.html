@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ partial "banner.html" }}
+  <nav>
+    {{ range .Pages.ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}">
+        <div>
+          <div>
+            <h5>{{ .Title }}</h5>
+            <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
+          </div>
+          <img src="{{ .Site.Params.imagehost }}{{ .Params.previewimage }}" alt="Preview Image.">
+        </div>
+      </a>
+    {{ end }}
+  </nav>
+{{ end }}

@@ -1,0 +1,16 @@
+<div class="pagenav">
+  <div>
+    {{ with .Next }}
+      <a href="{{ .Permalink }}">&larr; Newer</a>
+    {{ end }}
+  </div>
+  <div>
+    <a href="../">Go back</a>
+  </div>
+  <div>
+    {{ with .Prev }}
+      <a href="{{ .Permalink }}">Older &rarr;</a>
+    {{ end }}
+  </div>
+</div>
+<hr>

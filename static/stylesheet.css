@@ -1,0 +1,190 @@
+/* 
+
+  Style Sheet for Personal Website
+
+  Harry Saliba 2022
+
+*/
+
+@font-face {
+  font-family: "Jost";
+  src: url("jost.ttf");
+}
+html {
+  font-family: "Jost", sans-serif;
+  font-size: 6mm;
+  display: flex;
+  justify-content: center;
+}
+body {
+  max-width: 40rem;
+  margin: 0;
+  float: left;
+}
+h1,h1,h3,h4,h5,h6 {
+  font-weight: 600;
+}
+h1,h1,h3,h4,h5,h6,p,caption {
+  margin-top: .666em;
+  margin-bottom: .666em;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.3333rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: .666666rem;
+}
+p, li, a {
+  font-size: 1rem;
+  font-weight: 300;
+}
+a {
+  color: black;
+}
+small {
+  font-size: .666666rem;
+  font-weight: 400;
+}
+strong {
+  font-weight: 600;
+}
+abbr {
+  text-decoration: none;
+  cursor: pointer;
+}
+section p {
+  max-width: 40rem;
+  min-width: 30rem;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+main img {
+  max-width: 40rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.title-text {
+  background-clip: text;
+  color: transparent;
+  background-image: url("title-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: black;
+}
+nav p, nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+nav>a>div {
+  position: relative;
+}
+nav>a>div>div {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: .5rem 0 .5rem 1rem;
+  padding: 0 .25rem .15rem .25rem;
+  background-color: white;
+}
+nav>a>div>img {
+  max-width: 100%;
+  margin: 0;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer p, footer a {
+  font-size: .6666rem;
+}
+a small {
+  text-decoration: none;
+  color: black;
+}
+.pagenav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.pagenav>div {
+  display: flex;
+  justify-content: center;
+}
+code {
+  display: block;
+  overflow-wrap: break-word;
+  padding: 1rem;
+  font-size: .75rem;
+  border-radius: .5rem;
+  background-color: lightgray;
+  white-space: pre-line;
+}
+
+/* Larger styles */
+@media screen and (min-width: 280mm) {
+  html {
+    font-size: 7mm;
+  }
+}
+
+/* Largest styles */
+@media screen and (min-width: 320mm) {
+  html {
+    font-size: 8mm;
+  }
+}
+
+/* Smaller styles */
+@media screen and (max-width: 240mm) {
+  html {
+    font-size: 5mm;
+  }
+  nav {
+    grid-template-columns: 1fr;
+    gap: 0 0;
+  }
+  nav>a>div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Smallest styles */
+@media screen and (max-width: 200mm) {
+  html {
+    font-size: 4mm;
+  }
+  body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

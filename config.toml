@@ -1,0 +1,5 @@
+baseURL = 'https://harry.technology/'
+languageCode = 'en-us'
+title = 'Harry Sailba'
+[Params]
+  imagehost = 'https://harry.technology/photos/imported/'
