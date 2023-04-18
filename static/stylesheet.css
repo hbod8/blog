@@ -87,13 +87,15 @@ main img {
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 1rem;
+  grid-auto-rows: 10px;
+  gap: 0 1rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 nav a {
   text-decoration: none;
   color: black;
+  overflow: hidden;
 }
 nav a:hover {
   text-decoration: underline;
