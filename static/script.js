@@ -1,18 +1,20 @@
-window.onload = displayExifData();
+async function displayDataOnImage(image) {
+  let data = await window.exifr.parse(image);
+  let exp = (data.ExposureTime > .35 || decimalToFraction(data.ExposureTime).display.length > 10) ? data.ExposureTime : decimalToFraction(data.ExposureTime).display;
+  let iso = data.ISO;
+  let fln = data.FocalLength;
+  let apt = data.FNumber;
+  let exv = data.ExposureCompensation
+  let dataString = `${fln}mm f${apt} ${exp}s iso${iso} ${(exv == 0) ? "" : exv + "ev"}`;
+  let dataElement = document.createElement("small");
+  dataElement.innerText = dataString;
+  image.after(dataElement);
+}
 
 async function displayExifData() {
   let images = document.getElementsByClassName("exif");
   for (image of images) {
-    let data = await window.exifr.parse(image);
-    let exp = (data.ExposureTime > .35 || decimalToFraction(data.ExposureTime).display.length > 10) ? data.ExposureTime : decimalToFraction(data.ExposureTime).display;
-    let iso = data.ISO;
-    let fln = data.FocalLength;
-    let apt = data.FNumber;
-    let exv = data.ExposureCompensation
-    let dataString = `${fln}mm f${apt} ${exp}s iso${iso} ${(exv == 0) ? "" : exv + "ev"}`;
-    let dataElement = document.createElement("small");
-    dataElement.innerText = dataString;
-    image.after(dataElement);
+    displayDataOnImage(image);
   }
 }
 
@@ -67,5 +69,6 @@ async function setupMasonryResize() {
 }
 
 setupMasonry();
+displayExifData();
 
 window.addEventListener("resize", setupMasonryResize);

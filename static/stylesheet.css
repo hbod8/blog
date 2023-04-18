@@ -150,6 +150,13 @@ code {
   background-color: lightgray;
   white-space: pre-line;
 }
+.exif {
+  margin-bottom: 0;
+}
+.exif ~ small
+{
+  float: right;
+}
 
 /* Larger styles */
 @media screen and (min-width: 280mm) {
