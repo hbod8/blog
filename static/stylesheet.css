@@ -96,6 +96,7 @@ nav a {
   text-decoration: none;
   color: black;
   overflow: hidden;
+  grid-row-end: span 50;
 }
 nav a:hover {
   text-decoration: underline;
