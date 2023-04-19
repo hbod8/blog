@@ -1,3 +1,3 @@
 <a style="text-decoration:none;" href="{{ .Destination }}">
-  <img src="{{ .Destination }}" alt="{{ .Text }}">
+  <img src="{{ with .Page.Site.Params.imagehost }}{{ . }}{{ end }}{{ .Destination }}" alt="{{ .Text }}" class="exif">
 </a>

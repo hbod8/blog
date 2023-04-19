@@ -1,5 +1,3 @@
-baseURL = 'https://harry.technology/'
+baseURL = 'https://harrysaliba.com/'
 languageCode = 'en-us'
 title = 'Harry Saliba'
-[Params]
-  imagehost = 'https://harry.technology/photos/imported/'

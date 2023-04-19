@@ -8,7 +8,7 @@
             <h5>{{ .Title }}</h5>
             <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
           </div>
-          <img src="{{ .Site.Params.imagehost }}{{ .Params.previewimage }}" alt="Preview Image.">
+          <img src="{{ with .Site.Params.imagehost }}{{ . }}{{ end }}{{ index .Params.images 0 }}" alt="Preview Image.">
         </div>
       </a>
     {{ end }}
