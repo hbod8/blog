@@ -5,11 +5,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>
-    {{ block "title" . }}
-      {{ .Site.Title }}
-    {{ end }}
-  </title>
+    <meta charset="utf-8" />
+    <title>
+      {{ block "title" . }}
+        {{ .Site.Title }}
+      {{ end }}
+    </title>
     <!-- CSS only -->
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/stylesheet.css">
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.ico" type="image/png">
