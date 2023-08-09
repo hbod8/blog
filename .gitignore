@@ -1,3 +1,7 @@
 .hugo_build.lock
 public
+<<<<<<< HEAD
 **/.DS_Store
+=======
+.DS_Store
+>>>>>>> 3d9705a062708c1c3d3272c28b188aab278f0308
