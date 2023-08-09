@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ partial "banner.html" }}
   <nav>
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range .Pages }}
       <a href="{{ .RelPermalink }}" class="masonry-item">
         <div>
           <div>
