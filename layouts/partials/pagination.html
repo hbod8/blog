@@ -1,0 +1,41 @@
+<div class="pagination-container">
+  <nav class="pagination">
+    {{ with .Paginator }}
+      {{ $currentPageNumber := .PageNumber }}
+      {{ with .First }}
+        {{ if ne $currentPageNumber .PageNumber }}
+          <a href="{{ .URL }}">&laquo;&laquo;</a>
+        {{ end }}
+      {{ end }}
+      {{ with .Prev }}
+          <a href="{{ .URL }}">&laquo;</a>
+      {{ end }}
+  
+      {{ $slots := 5 }}
+      {{ $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
+      {{ $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
+      {{ if lt (add (sub $end $start) 1) $slots }}
+        {{ $start = math.Max 1 (add (sub $end $slots) 1) }}
+      {{ end }}
+  
+      {{ range $k := seq $start $end }}
+        {{ if eq $.Paginator.PageNumber $k }}
+          <a class="active-pager">{{ $k }}</a>
+        {{ else }}
+          <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}">{{ $k }}</a>
+        {{ end }}
+      {{ end }}
+  
+      {{ with .Next }}
+          <a href="{{ .URL }}">&raquo;</a>
+      {{ end }}
+  
+      {{ with .Last }}
+        {{ if ne $currentPageNumber .PageNumber }}
+          <a href="{{ .URL }}">&raquo;&raquo;</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </nav>
+  <a href="{{ ref . "posts" }}"><h4>All Posts</h4></a>
+</div>
