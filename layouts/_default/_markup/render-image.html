@@ -1,3 +1,12 @@
-<a style="text-decoration:none;" href="{{ if .Page.Site.Params.imagehost }}{{ .Page.Site.Params.imagehost }}{{ replace .Destination "../" "" }}{{ else }}{{ .Destination }}{{ end }}">
-  <img src="{{ if .Page.Site.Params.imagehost }}{{ .Page.Site.Params.imagehost }}{{ replace .Destination "../" "" }}{{ else }}{{ .Destination }}{{ end }}" alt="{{ .Text }}" class="exif" loading="lazy">
+{{ $alt := .Text }}
+<a
+  style="text-decoration:none;"
+  href="{{ .Destination }}">
+  {{ with (resources.GetRemote .Destination).Resize "1800x jpeg q60" }}
+    <img
+      src="{{ .RelPermalink }}"
+      alt="{{ $alt }}"
+      class="exif"
+      loading="lazy">
+  {{ end }}
 </a>

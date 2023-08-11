@@ -1,15 +1,15 @@
 {{ define "main" }}
-  <nav>
-  {{ range .Pages.ByDate.Reverse }}
-  <a href="{{ .RelPermalink }}">
-    <div>
+  <div class="masonry-container">
+    {{ range .Pages.ByDate.Reverse }}
+    <a href="{{ .RelPermalink }}" class="masonry-item">
       <div>
-        <h5>{{ .Title }}</h5>
-        <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
+        <div>
+          <h5>{{ .Title }}</h5>
+          <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
+        </div>
+        <img src="{{ with .Site.Params.imagehost }}{{ . }}{{ end }}{{ index .Params.images 0 }}" alt="Preview Image.">
       </div>
-      <img src="{{ with .Site.Params.imagehost }}{{ . }}{{ end }}{{ index .Params.images 0 }}" alt="Preview Image.">
-    </div>
-  </a>
+    </a>
     {{ end }}
-  </nav>
+  </div>
 {{ end }}
