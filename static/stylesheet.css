@@ -177,10 +177,10 @@ code {
   background-color: lightgray;
   white-space: pre-line;
 }
-.exif {
+.rendered-image {
   margin-bottom: 0;
 }
-.exif ~ small
+.rendered-image ~ small
 {
   float: right;
 }
@@ -201,6 +201,9 @@ code {
 
 /* Smaller styles */
 @media screen and (max-width: 240mm) {
+  .pagination-container * {
+    font-size: 2rem;
+  }
   html {
     font-size: 5mm;
   }
@@ -216,6 +219,9 @@ code {
 
 /* Smallest styles */
 @media screen and (max-width: 200mm) {
+  .pagination-container * {
+    font-size: 3rem;
+  }
   html {
     font-size: 4mm;
   }
