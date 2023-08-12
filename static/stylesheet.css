@@ -177,10 +177,10 @@ code {
   background-color: lightgray;
   white-space: pre-line;
 }
-.exif {
+.rendered-image {
   margin-bottom: 0;
 }
-.exif ~ small
+.rendered-image ~ small
 {
   float: right;
 }
