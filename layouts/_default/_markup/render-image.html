@@ -1,23 +1,23 @@
-{{ $alt := .Text }}
+{{ $lg := (resources.GetRemote .Destination).Resize "1800x jpeg q60" }}
+{{ $md := (resources.GetRemote .Destination).Resize "1200x jpeg q60" }}
+{{ $sm := (resources.GetRemote .Destination).Resize "900x jpeg q60" }}
 <a
   style="text-decoration:none;"
   href="{{ .Destination }}">
-  {{ with (resources.GetRemote .Destination).Resize "1800x jpeg q60" }}
-    <img
-      class="rendered-image"
-      src="{{ .RelPermalink }}"
-      alt="{{ $alt }}"
-      loading="lazy" />
-    {{ with .Exif }}
-      <small>
-        {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}
-        {{ with .Tags.ExposureTime }}{{ . }}s{{ end }}
-        {{ with .Tags.FNumber }}f{{ . }}{{ end }}
-        {{ with .Tags.ISOSpeedRatings }}iso{{ . }}{{ end }}
-        {{ with .Tags.LensModel }}lens: {{ . }}{{ end }}
-        {{ with .Tags.Make }}camera: {{ . }}{{ end }}
-        {{ with .Tags.Model }}{{ . }}{{ end }}
-      </small>
-    {{ end }}
+  <picture class="rendered-image">
+    <source srcset="{{ $lg.RelPermalink }}" media="(min-width: 2000px)" />
+    <source srcset="{{ $md.RelPermalink }}" media="(min-width: 1400px)" />
+    <img src="{{ $sm.RelPermalink }}" alt="{{ .Text }}" />
+  </picture>
+  {{ with $sm.Exif }}
+    <small>
+      {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}
+      {{ with .Tags.ExposureTime }}{{ . }}s{{ end }}
+      {{ with .Tags.FNumber }}f{{ . }}{{ end }}
+      {{ with .Tags.ISOSpeedRatings }}iso{{ . }}{{ end }}
+      {{ with .Tags.LensModel }}lens: {{ . }}{{ end }}
+      {{ with .Tags.Make }}camera: {{ . }}{{ end }}
+      {{ with .Tags.Model }}{{ . }}{{ end }}
+    </small>
   {{ end }}
 </a>

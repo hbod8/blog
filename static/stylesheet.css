@@ -130,7 +130,7 @@ a small {
   padding: 0 .25rem .15rem .25rem;
   background-color: white;
 }
-.masonry-container>a>div>img {
+.masonry-container>a>div img {
   max-width: 100%;
   margin: 0;
 }
