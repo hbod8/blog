@@ -84,44 +84,6 @@ main img {
   background-position: center;
   background-size: cover;
 }
-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 10px;
-  gap: 0 1rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-nav a {
-  text-decoration: none;
-  color: black;
-  overflow: hidden;
-  grid-row-end: span 50;
-}
-nav a:hover {
-  text-decoration: underline;
-  color: black;
-}
-nav p, nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
-  margin-top: .25rem;
-  margin-bottom: .25rem;
-}
-nav>a>div {
-  position: relative;
-}
-nav>a>div>div {
-  max-width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  margin: .5rem 0 .5rem 1rem;
-  padding: 0 .25rem .15rem .25rem;
-  background-color: white;
-}
-nav>a>div>img {
-  max-width: 100%;
-  margin: 0;
-}
 footer {
   display: flex;
   flex-direction: column;
@@ -133,6 +95,70 @@ footer p, footer a {
 a small {
   text-decoration: none;
   color: black;
+}
+.masonry-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 10px;
+  gap: 0 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.masonry-container a {
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  grid-row-end: span 50;
+}
+.masonry-container a:hover {
+  text-decoration: underline;
+  color: black;
+}
+.masonry-container p, .masonry-container h1, .masonry-container h2, .masonry-container h3, .masonry-container h4, .masonry-container h5, .masonry-container h6 {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+.masonry-container>a>div {
+  position: relative;
+}
+.masonry-container>a>div>div {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: .5rem 0 .5rem 1rem;
+  padding: 0 .25rem .15rem .25rem;
+  background-color: white;
+}
+.masonry-container>a>div img {
+  max-width: 100%;
+  margin: 0;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.pagination>* {
+  margin: 0 .25rem 0 .25rem;
+  font-size: 1.3333rem;
+}
+.pagination>a {
+  text-decoration: none;
+}
+.pagination>.active-pager {
+  font-weight: bold;
+}
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.pagination-container * {
+  margin-top: .15rem;
+  margin-bottom: .15rem;
 }
 .pagenav {
   display: grid;
@@ -151,10 +177,10 @@ code {
   background-color: lightgray;
   white-space: pre-line;
 }
-.exif {
+.rendered-image {
   margin-bottom: 0;
 }
-.exif ~ small
+.rendered-image ~ small
 {
   float: right;
 }
@@ -175,6 +201,9 @@ code {
 
 /* Smaller styles */
 @media screen and (max-width: 240mm) {
+  .pagination-container * {
+    font-size: 2rem;
+  }
   html {
     font-size: 5mm;
   }
@@ -190,6 +219,9 @@ code {
 
 /* Smallest styles */
 @media screen and (max-width: 200mm) {
+  .pagination-container * {
+    font-size: 3rem;
+  }
   html {
     font-size: 4mm;
   }
