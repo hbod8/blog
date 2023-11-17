@@ -1,0 +1,7 @@
+baseURL: /
+languageCode: en-us
+title: Harry Saliba
+timeout: 10m
+googleAnalytics: G-MLW1QLZ5BD
+taxonimies:
+  tag: tags
