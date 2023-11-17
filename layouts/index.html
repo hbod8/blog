@@ -8,13 +8,14 @@
             <h5>{{ .Title }}</h5>
             <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
           </div>
-          {{ $post := . }}
-          {{ with (resources.GetRemote (index .Params.images 0)).Resize "900x webp" }}
-            <img
-              src="{{ .RelPermalink }}"
-              alt="Preview Image for {{ $post.Title }}."
-              loading="lazy">
-          {{ end }}
+          {{ $webp := (resources.GetRemote (index .Params.images 0)).Resize "900x webp" }}
+          {{ $avif := (resources.GetRemote (index .Params.images 0)).Resize "900x avif" }}
+          {{ $jpeg := (resources.GetRemote (index .Params.images 0)).Resize "900x jpeg" }}
+          <picture>
+            <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+            <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
+            <img src="{{ $jpeg.RelPermalink }}" alt="Preview Image for {{ .Title }}.">
+          </picture>
         </div>
       </a>
     {{ end }}
