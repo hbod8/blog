@@ -182,7 +182,8 @@ code {
 }
 .rendered-image ~ small
 {
-  float: right;
+  display: block;
+  text-align: right;
 }
 
 /* Larger styles */
