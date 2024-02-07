@@ -8,11 +8,13 @@
             <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
           </div>
           {{ $post := . }}
-          {{ with (resources.GetRemote (index .Params.images 0)).Resize "900x webp" }}
-            <img
-              src="{{ .RelPermalink }}"
-              alt="Preview Image for {{ $post.Title }}."
-              loading="lazy">
+          {{ with resources.GetRemote (index .Params.images 0) }}
+            {{ with .Resize "900x webp" }}
+              <img
+                src="{{ .RelPermalink }}"
+                alt="Preview Image for {{ $post.Title }}."
+                loading="lazy">
+            {{ end }}
           {{ end }}
         </div>
       </a>
