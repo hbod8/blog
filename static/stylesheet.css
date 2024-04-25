@@ -202,6 +202,9 @@ code {
 
 /* Smaller styles */
 @media screen and (max-width: 240mm) {
+  main img {
+    max-width: 100%;
+  }
   .pagination a {
     margin-left: .5rem;
     margin-right: .5rem;
@@ -224,6 +227,9 @@ code {
 
 /* Smallest styles */
 @media screen and (max-width: 200mm) {
+  main img {
+    max-width: 100%;
+  }
   html {
     font-size: 4mm;
   }
