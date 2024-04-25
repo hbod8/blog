@@ -202,32 +202,36 @@ code {
 
 /* Smaller styles */
 @media screen and (max-width: 240mm) {
-  .pagination-container * {
-    font-size: 2rem;
+  .pagination a {
+    margin-left: .5rem;
+    margin-right: .5rem;
   }
   html {
     font-size: 5mm;
   }
-  nav {
+  .masonry-container {
     grid-template-columns: 1fr;
     gap: 0 0;
   }
-  nav>a>div {
+  .masonry-item {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+  section p {
+    min-width: auto;
   }
 }
 
 /* Smallest styles */
 @media screen and (max-width: 200mm) {
-  .pagination-container * {
-    font-size: 3rem;
-  }
   html {
     font-size: 4mm;
   }
   body {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  section p {
+    min-width: auto;
   }
 }
