@@ -1,9 +1,9 @@
 ---
 title: ""
 publishdate: {{ .Date }}
-date: {{ .Name }}
-images: ['https://harrysaliba.chttps://harrysaliba.com/photos/2022-09-16/converted/_DSC7242.jpg']
+date: {{ replaceRE `([0-9]{4})([0-9]{2})([0-9]{2})(.*)` "$1-$2-$3" .Name }}
+images: ['https://harrysaliba.com/photos/{{ replaceRE `([0-9]{4})([0-9]{2})([0-9]{2})(.*)` "$1-$2-$3" .Name }}/converted/REPLACE_ME.jpg']
 draft: true
 ---
 
-![](https://harrysaliba.chttps://harrysaliba.com/photos/2022-05-31/converted/DSC05839.jpg)
+![](https://harrysaliba.com/photos/{{ replaceRE `([0-9]{4})([0-9]{2})([0-9]{2})(.*)` "$1-$2-$3" .Name }}/converted/REPLACE_ME.jpg)
