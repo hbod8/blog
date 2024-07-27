@@ -1,6 +1,6 @@
 {{ define "main" }}
   <header>
-    <h1>Tags</h1>
+    <h1>{{ .Title }}</h1>
   </header>
   <h5>
     {{ range .Pages.ByDate.Reverse }}

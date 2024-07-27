@@ -1,4 +1,4 @@
-<div class="pagination-container">
+<section class="pagination-container">
   <nav class="pagination">
     {{ with .Paginator }}
       {{ $currentPageNumber := .PageNumber }}
@@ -38,4 +38,4 @@
     {{ end }}
   </nav>
   <a href="{{ ref . "posts" }}"><h4>All Posts</h4></a>
-</div>
+</section>

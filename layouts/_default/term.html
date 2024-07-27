@@ -2,7 +2,7 @@
   <header>
     <h1>{{ .Title }}</h1>
   </header>
-  <div class="masonry-container">
+  <section class="masonry-container">
     {{ range .Pages.ByDate.Reverse }}
     <a href="{{ .RelPermalink }}" class="masonry-item">
       <div>
@@ -14,5 +14,5 @@
       </div>
     </a>
     {{ end }}
-  </div>
+  </section>
 {{ end }}

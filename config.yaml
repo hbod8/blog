@@ -5,3 +5,53 @@ timeout: 10m
 googleAnalytics: G-MLW1QLZ5BD
 taxonimies:
   tag: tags
+params:
+  featured:
+    - name: Key Arena, as it was formerly known
+      file: scans/2024-07-16/converted/000011720023.jpg
+      link: posts/20240716/
+    - name: Sweet Pea dinghy
+      file: scans/2024-07-16/converted/000011720029.jpg
+      link: posts/20240716/
+    - name: Lightrail into the city
+      file: scans/2024-07-16/converted/000011720035.jpg
+      link: posts/20240716/
+    - name: Aliza on the 4th of july
+      file: scans/2024-07-09/converted/000010150014.jpg
+      link: posts/20240709/
+    - name: Beach looking out to sea
+      file: scans/2024-07-03_1/converted/000008890018.jpg
+      link: posts/20240703-1/
+    - name: Saliba family on boat
+      file: scans/2024-07-03_1/converted/000008890044.jpg
+      link: posts/20240703-1/
+    - name: Upper Lena Lake peak
+      file: scans/2024-07-03/converted/000008910004.jpg
+      link: posts/20240703/
+    - name: Rocks in Joshua Tree
+      file: scans/2024-07-03/converted/000008910068.jpg
+      link: posts/20240703/
+    - name: Building on UBC campus
+      file: 2024-06-01/converted/_DSC6699.jpg
+      link: posts/20240601/
+    - name: Cliffside hotel Hokkaido
+      file: 2023-08-28/converted/_DSC1050.jpg
+      link: posts/20230828/
+    - name: Roll tack
+      file: 2021-10-11/converted/DSC01737.jpg
+      link: posts/20211011/
+    - name: Scupture park picnic
+      file: 2022-07-10/converted/_DSC6546.jpg
+      link: posts/20220710/
+    - name: Skull island shore
+      file: 2022-05-03/converted/DSC05479.jpg
+      link: posts/20220503/
+    - name: Fence along the shoreline of chuckanut bay
+      file: 2022-01-04/converted/DSC03814.jpg
+      link: posts/20220104/
+    - name: Grace in the library
+      file: 2023-11-14/converted/_DSC1491.jpg
+      link: posts/20231114/
+    - name: Cliffside in Hokkaido
+      file: 2023-08-24/converted/_DSC0933.jpg
+      link: posts/20230824/

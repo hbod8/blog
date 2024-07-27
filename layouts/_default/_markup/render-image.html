@@ -1,4 +1,4 @@
-{{ if $img := (resources.GetRemote .Destination) }}
+{{ if $img := (resources.Get .Destination) }}
   {{ $xl := $img.Resize "2880x jpeg q60" }}
   {{ $lg := $img.Resize "1920x jpeg q60" }}
   {{ $md := $img.Resize "1440x jpeg q60" }}

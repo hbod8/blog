@@ -1,8 +1,7 @@
 
-<h5>
-  Tags:
-  {{ range .Site.Taxonomies.tags }}
+<section class="tags">
+  {{ range .Site.Taxonomies.tags.ByCount }}
     <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
     &nbsp;
   {{ end }}
-</h5>
+</section>
