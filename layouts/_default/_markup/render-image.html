@@ -1,12 +1,11 @@
-{{ if $img := (resources.GetRemote .Destination) }}
-<<<<<<< HEAD
+{{ if $img := (resources.Get .Destination) }}
   {{ $xl := $img.Resize "2880x jpeg q60" }}
   {{ $lg := $img.Resize "1920x jpeg q60" }}
   {{ $md := $img.Resize "1440x jpeg q60" }}
   {{ $sm := $img.Resize "960x jpeg q60" }}
   <a
     style="text-decoration:none;"
-    href="{{ .Destination }}">
+    href="{{ $lg.RelPermalink }}">
     <!-- <picture class="rendered-image">
       <source srcset="{{ $lg.RelPermalink }}" media="(min-width: 2000px)" />
       <source srcset="{{ $md.RelPermalink }}" media="(min-width: 1300dp)" />
@@ -16,19 +15,6 @@
       class="rendered-image"
       src="{{ $sm.RelPermalink }}"
       srcset="{{ $sm.RelPermalink }}, {{ $md.RelPermalink }} 1.5x, {{ $lg.RelPermalink }} 2x, {{ $xl.RelPermalink }} 3x" />
-=======
-  {{ $lg := $img.Resize "1800x jpeg q60" }}
-  {{ $md := $img.Resize "1200x jpeg q60" }}
-  {{ $sm := $img.Resize "900x jpeg q60" }}
-  <a
-    style="text-decoration:none;"
-    href="{{ .Destination }}">
-    <picture class="rendered-image">
-      <source srcset="{{ $lg.RelPermalink }}" media="(min-width: 2000px)" />
-      <source srcset="{{ $md.RelPermalink }}" media="(min-width: 1400px)" />
-      <img src="{{ $sm.RelPermalink }}" alt="{{ .Text }}" />
-    </picture>
->>>>>>> ffe9f7a62162f2e519b9d6c3f038f0268700fccc
     {{ with $sm.Exif }}
       <small>
         {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}

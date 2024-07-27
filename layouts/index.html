@@ -1,6 +1,25 @@
 {{ define "main" }}
   {{ partial "banner.html" . }}
-  <div class="masonry-container">
+  <section class="masonry-container">
+    {{ range .Site.Params.featured }}
+      <a href="{{ .link }}" class="masonry-item">
+        <div>
+          {{ with resources.Get .file }}
+            {{ $webp := .Resize "900x webp" }}
+            {{ $avif := .Resize "900x avif" }}
+            {{ $jpeg := .Resize "900x jpeg" }}
+            <picture>
+              <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+              <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
+              <img src="{{ $jpeg.RelPermalink }}" alt="alt">
+            </picture>
+          {{ end }}
+        </div>
+      </a>
+    {{ end }}
+  </section>
+  {{ partial "tags.html" . }}
+  <section class="masonry-container">
     {{ range (.Paginate (.GetPage "posts").Pages.ByDate.Reverse 20).Pages }}
       <a href="{{ .RelPermalink }}" class="masonry-item">
         <div>
@@ -9,7 +28,7 @@
             <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
           </div>
           {{ $title := .Title }}
-          {{ with resources.GetRemote (index .Params.images 0) }}
+          {{ with resources.Get (index .Params.images 0) }}
             {{ $webp := .Resize "900x webp" }}
             {{ $avif := .Resize "900x avif" }}
             {{ $jpeg := .Resize "900x jpeg" }}
@@ -22,7 +41,5 @@
         </div>
       </a>
     {{ end }}
-  </div>
-  {{ partial "pagination.html" . }}
-  {{ partial "tags.html" . }}
+  </section>
 {{ end }}
