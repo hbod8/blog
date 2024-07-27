@@ -10,15 +10,15 @@ params:
     - name: Key Arena, as it was formerly known
       file: scans/2024-07-16/converted/000011720023.jpg
       link: posts/20240716/
+    - name: Aliza on the 4th of july
+      file: scans/2024-07-09/converted/000010150014.jpg
+      link: posts/20240709/
     - name: Sweet Pea dinghy
       file: scans/2024-07-16/converted/000011720029.jpg
       link: posts/20240716/
     - name: Lightrail into the city
       file: scans/2024-07-16/converted/000011720035.jpg
       link: posts/20240716/
-    - name: Aliza on the 4th of july
-      file: scans/2024-07-09/converted/000010150014.jpg
-      link: posts/20240709/
     - name: Beach looking out to sea
       file: scans/2024-07-03_1/converted/000008890018.jpg
       link: posts/20240703-1/
@@ -27,9 +27,6 @@ params:
       link: posts/20240703-1/
     - name: Upper Lena Lake peak
       file: scans/2024-07-03/converted/000008910004.jpg
-      link: posts/20240703/
-    - name: Rocks in Joshua Tree
-      file: scans/2024-07-03/converted/000008910068.jpg
       link: posts/20240703/
     - name: Building on UBC campus
       file: 2024-06-01/converted/_DSC6699.jpg

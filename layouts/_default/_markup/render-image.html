@@ -5,7 +5,7 @@
   {{ $sm := $img.Resize "960x jpeg q60" }}
   <a
     style="text-decoration:none;"
-    href="{{ .Destination }}">
+    href="{{ $lg.RelPermalink }}">
     <!-- <picture class="rendered-image">
       <source srcset="{{ $lg.RelPermalink }}" media="(min-width: 2000px)" />
       <source srcset="{{ $md.RelPermalink }}" media="(min-width: 1300dp)" />
