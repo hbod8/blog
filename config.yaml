@@ -9,25 +9,22 @@ params:
   featured:
     - name: Key Arena, as it was formerly known
       file: scans/2024-07-16/converted/000011720023.jpg
-      link: posts/20240716/
+      link: posts/20240716-2/
     - name: Aliza on the 4th of july
       file: scans/2024-07-09/converted/000010150014.jpg
       link: posts/20240709/
     - name: Sweet Pea dinghy
       file: scans/2024-07-16/converted/000011720029.jpg
-      link: posts/20240716/
-    - name: Lightrail into the city
-      file: scans/2024-07-16/converted/000011720035.jpg
-      link: posts/20240716/
+      link: posts/20240716-2/
     - name: Beach looking out to sea
       file: scans/2024-07-03_1/converted/000008890018.jpg
-      link: posts/20240703-1/
+      link: posts/20240703-4/
     - name: Saliba family on boat
       file: scans/2024-07-03_1/converted/000008890044.jpg
-      link: posts/20240703-1/
+      link: posts/20240703-4/
     - name: Upper Lena Lake peak
       file: scans/2024-07-03/converted/000008910004.jpg
-      link: posts/20240703/
+      link: posts/20240703-3/
     - name: Building on UBC campus
       file: 2024-06-01/converted/_DSC6699.jpg
       link: posts/20240601/
@@ -45,7 +42,7 @@ params:
       link: posts/20220503/
     - name: Fence along the shoreline of chuckanut bay
       file: 2022-01-04/converted/DSC03814.jpg
-      link: posts/20220104/
+      link: posts/20220106/
     - name: Grace in the library
       file: 2023-11-14/converted/_DSC1491.jpg
       link: posts/20231114/
