@@ -15,7 +15,11 @@
       class="rendered-image"
       src="{{ $sm.RelPermalink }}"
       srcset="{{ $sm.RelPermalink }}, {{ $md.RelPermalink }} 1.5x, {{ $lg.RelPermalink }} 2x, {{ $xl.RelPermalink }} 3x" />
+<<<<<<< HEAD
     <!-- {{ with $sm.Exif }}
+=======
+    {{ with $sm.Exif }}
+>>>>>>> c6895c879682684fde0aceae6789c0d59fe648b1
       <small>
         {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}
         {{ with .Tags.ExposureTime }}{{ . }}s{{ end }}
