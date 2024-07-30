@@ -15,7 +15,7 @@
       class="rendered-image"
       src="{{ $sm.RelPermalink }}"
       srcset="{{ $sm.RelPermalink }}, {{ $md.RelPermalink }} 1.5x, {{ $lg.RelPermalink }} 2x, {{ $xl.RelPermalink }} 3x" />
-    {{ with $sm.Exif }}
+    <!-- {{ with $sm.Exif }}
       <small>
         {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}
         {{ with .Tags.ExposureTime }}{{ . }}s{{ end }}
@@ -25,7 +25,7 @@
         {{ with .Tags.Make }}camera: {{ . }}{{ end }}
         {{ with .Tags.Model }}{{ . }}{{ end }}
       </small>
-    {{ end }}
+    {{ end }} -->
   </a>
 {{ else }}
   {{ if .Text }}
