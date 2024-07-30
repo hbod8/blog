@@ -31,6 +31,5 @@ async function setupMasonryResize() {
 }
 
 setupMasonry();
-displayExifData();
 
 window.addEventListener("resize", setupMasonryResize);

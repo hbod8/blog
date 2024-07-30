@@ -1,23 +1,36 @@
-{{ $lg := (resources.GetRemote .Destination).Resize "1800x jpeg q60" }}
-{{ $md := (resources.GetRemote .Destination).Resize "1200x jpeg q60" }}
-{{ $sm := (resources.GetRemote .Destination).Resize "900x jpeg q60" }}
-<a
-  style="text-decoration:none;"
-  href="{{ .Destination }}">
-  <picture class="rendered-image">
-    <source srcset="{{ $lg.RelPermalink }}" media="(min-width: 2000px)" />
-    <source srcset="{{ $md.RelPermalink }}" media="(min-width: 1400px)" />
-    <img src="{{ $sm.RelPermalink }}" alt="{{ .Text }}" />
-  </picture>
-  {{ with $sm.Exif }}
-    <small>
-      {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}
-      {{ with .Tags.ExposureTime }}{{ . }}s{{ end }}
-      {{ with .Tags.FNumber }}f{{ . }}{{ end }}
-      {{ with .Tags.ISOSpeedRatings }}iso{{ . }}{{ end }}
-      {{ with .Tags.LensModel }}lens: {{ . }}{{ end }}
-      {{ with .Tags.Make }}camera: {{ . }}{{ end }}
-      {{ with .Tags.Model }}{{ . }}{{ end }}
-    </small>
+{{ if $img := (resources.Get .Destination) }}
+  {{ $xl := $img.Resize "2880x jpeg q60" }}
+  {{ $lg := $img.Resize "1920x jpeg q60" }}
+  {{ $md := $img.Resize "1440x jpeg q60" }}
+  {{ $sm := $img.Resize "960x jpeg q60" }}
+  <a
+    style="text-decoration:none;"
+    href="{{ $lg.RelPermalink }}">
+    <!-- <picture class="rendered-image">
+      <source srcset="{{ $lg.RelPermalink }}" media="(min-width: 2000px)" />
+      <source srcset="{{ $md.RelPermalink }}" media="(min-width: 1300dp)" />
+      <img src="{{ $sm.RelPermalink }}" alt="{{ .Text }}" />
+    </picture> -->
+    <img
+      class="rendered-image"
+      src="{{ $sm.RelPermalink }}"
+      srcset="{{ $sm.RelPermalink }}, {{ $md.RelPermalink }} 1.5x, {{ $lg.RelPermalink }} 2x, {{ $xl.RelPermalink }} 3x" />
+    <!-- {{ with $sm.Exif }}
+      <small>
+        {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}
+        {{ with .Tags.ExposureTime }}{{ . }}s{{ end }}
+        {{ with .Tags.FNumber }}f{{ . }}{{ end }}
+        {{ with .Tags.ISOSpeedRatings }}iso{{ . }}{{ end }}
+        {{ with .Tags.LensModel }}lens: {{ . }}{{ end }}
+        {{ with .Tags.Make }}camera: {{ . }}{{ end }}
+        {{ with .Tags.Model }}{{ . }}{{ end }}
+      </small>
+    {{ end }} -->
+  </a>
+{{ else }}
+  {{ if .Text }}
+    <p>Sorry, {{ .Text }} failed to render.</p>
+  {{ else }}
+    <p>Sorry, Image failed to render.</p>
   {{ end }}
-</a>
+{{ end }}
