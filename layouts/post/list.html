@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <section>
+    {{ range .Pages.ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}">
+        <h4>
+          <mark class="subtext">{{ .Date.Format "January 2, 2006" }}</mark> {{ .Title }}
+        </h4>
+      </a>
+    {{ end }}
+  </section>
+{{ end }}

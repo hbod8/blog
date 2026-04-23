@@ -11,8 +11,32 @@
   font-family: "Jost";
   src: url("Jost-Regular.ttf");
 }
+@font-face {
+  font-family: "Arbutus Slab";
+  src: url("ArbutusSlab-Regular.ttf");
+}
+@font-face {
+  font-family: "Special Elite";
+  src: url("SpecialElite-Regular.ttf");
+}
+@font-face {
+  font-family: "Lora";
+  src: url("Lora.ttf");
+}
+@font-face {
+  font-family: "Lora Italic";
+  src: url("Lora-Italic.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat.ttf");
+}
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url("Montserrat-Italic.ttf");
+}
 html {
-  font-family: "Jost", sans-serif;
+  font-family: "Arbutus Slab", sans-serif;
   font-size: 6mm;
   display: flex;
   justify-content: center;
@@ -24,32 +48,34 @@ body {
 }
 
 /* Font styles */
-h1,h1,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
-h1,h1,h3,h4,h5,h6,p,caption {
+h1,h2,h3,h4,h5,h6,p,caption {
   margin-top: .666em;
   margin-bottom: .666em;
 }
 h1 {
-  font-size: 2.3333rem;
+  font-size: 4rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 h3 {
-  font-size: 1.6666rem;
+  font-size: 2rem;
 }
 h4 {
-  font-size: 1.3333rem;
+  font-size: 1.4rem;
 }
 h5 {
   font-size: 1rem;
 }
 h6 {
-  font-size: .666666rem;
+  font-size: .7rem;
 }
 p, li, a {
+  /* font-family: 'Special Elite', serif; */
   font-size: 1rem;
   font-weight: 300;
 }
@@ -76,6 +102,12 @@ code {
   border-radius: .5rem;
   background-color: lightgray;
   white-space: pre-line;
+}
+mark.subtext {
+  font-size: .8rem;
+  font-weight: 400;
+  background-color: transparent;
+  color: darkgrey;
 }
 
 /* Section styles */
