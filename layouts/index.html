@@ -6,11 +6,9 @@
         <div>
           {{ with resources.Get .file }}
             {{ $webp := .Resize "900x webp" }}
-            {{ $avif := .Resize "900x avif" }}
             {{ $jpeg := .Resize "900x jpeg" }}
             <picture>
               <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-              <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
               <img src="{{ $jpeg.RelPermalink }}" alt="alt">
             </picture>
           {{ end }}
@@ -28,5 +26,10 @@
       </a>
     {{ end }}
   </section>
-  {{ partial "tags.html" . }}
+  <section class="tags">
+    <h3>Tags</h3>
+    {{ range .Site.Taxonomies.tags.ByCount }}
+      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    {{ end }}
+  </section>
 {{ end }}

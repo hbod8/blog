@@ -243,6 +243,9 @@ section.pagination>.active-pager {
 .rendered-image {
   margin-bottom: 0;
 }
+.rendered-image img {
+  width: 100%;
+}
 .rendered-image ~ small
 {
   display: none;

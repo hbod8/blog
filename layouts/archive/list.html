@@ -2,6 +2,12 @@
   <header>
     <h1>Archived Posts</h1>
   </header>
+  <section class="tags">
+    <h4>Tags</h4>
+    {{ range (index .Site.Taxonomies "archive-tags").ByCount }}
+      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    {{ end }}
+  </section>
   <section class="masonry-container">
     {{ range .Pages.ByDate.Reverse }}
       <a href="{{ .RelPermalink }}" class="masonry-item">
@@ -13,11 +19,9 @@
           {{ $title := .Title }}
           {{ with resources.Get (index .Params.images 0) }}
             {{ $webp := .Resize "900x webp" }}
-            {{ $avif := .Resize "900x avif" }}
             {{ $jpeg := .Resize "900x jpeg" }}
             <picture>
               <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-              <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
               <img src="{{ $jpeg.RelPermalink }}" alt="Preview Image for {{ $title }}.">
             </picture>
           {{ end }}

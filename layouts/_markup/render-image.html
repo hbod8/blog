@@ -1,31 +1,51 @@
-{{ if $img := (resources.Get .Destination) }}
-  {{ $xl := $img.Resize "2880x jpeg q60" }}
-  {{ $lg := $img.Resize "1920x jpeg q60" }}
-  {{ $md := $img.Resize "1440x jpeg q60" }}
-  {{ $sm := $img.Resize "960x jpeg q60" }}
+{{ $img := .Page.Resources.Get .Destination }}
+{{ if not $img }}
+  {{ $img = resources.Get .Destination }}
+{{ end }}
+{{ if $img }}
+  {{ $webp_quality := "q75" }}
+  {{ if eq $img.MediaType.SubType "png" }}
+    {{ $webp_quality = "lossless" }}
+  {{ end }}
+
+  {{/* Only generate sizes smaller than the source */}}
+  {{ $jpeg_xl := $img }}
+  {{ $webp_xl := $img }}
+  {{ if gt $img.Width 2880 }}
+    {{ $jpeg_xl = $img.Resize "2880x jpeg q75" }}
+    {{ $webp_xl = $img.Resize (printf "2880x webp %s" $webp_quality) }}
+  {{ end }}
+
+  {{ $jpeg_lg := $img }}
+  {{ $webp_lg := $img }}
+  {{ if gt $img.Width 1280 }}
+    {{ $jpeg_lg = $img.Resize "1280x jpeg q60" }}
+    {{ $webp_lg = $img.Resize (printf "1280x webp %s" $webp_quality) }}
+  {{ end }}
+
+  {{ $jpeg_sm := $img }}
+  {{ $webp_sm := $img }}
+  {{ if gt $img.Width 640 }}
+    {{ $jpeg_sm = $img.Resize "640x jpeg q60" }}
+    {{ $webp_sm = $img.Resize (printf "640x webp %s" $webp_quality) }}
+  {{ end }}
   <a
     style="text-decoration:none;"
-    href="{{ $lg.RelPermalink }}">
-    <!-- <picture class="rendered-image">
-      <source srcset="{{ $lg.RelPermalink }}" media="(min-width: 2000px)" />
-      <source srcset="{{ $md.RelPermalink }}" media="(min-width: 1300dp)" />
-      <img src="{{ $sm.RelPermalink }}" alt="{{ .Text }}" />
-    </picture> -->
-    <img
-      class="rendered-image"
-      src="{{ $sm.RelPermalink }}"
-      srcset="{{ $sm.RelPermalink }}, {{ $md.RelPermalink }} 1.5x, {{ $lg.RelPermalink }} 2x, {{ $xl.RelPermalink }} 3x" />
-    <!-- {{ with $sm.Exif }}
-      <small>
-        {{ with .Tags.FocalLength }}{{ lang.FormatNumber 2 . }}mm{{ end }}
-        {{ with .Tags.ExposureTime }}{{ . }}s{{ end }}
-        {{ with .Tags.FNumber }}f{{ . }}{{ end }}
-        {{ with .Tags.ISOSpeedRatings }}iso{{ . }}{{ end }}
-        {{ with .Tags.LensModel }}lens: {{ . }}{{ end }}
-        {{ with .Tags.Make }}camera: {{ . }}{{ end }}
-        {{ with .Tags.Model }}{{ . }}{{ end }}
-      </small>
-    {{ end }} -->
+    href="{{ $img.RelPermalink }}">
+    <picture
+      class="rendered-image">
+      <source
+        type="image/webp"
+        srcset="{{ $webp_sm.RelPermalink }} 640w, {{ $webp_lg.RelPermalink }} 1280w, {{ $webp_xl.RelPermalink }} 2880w"
+        sizes="(max-width: 640px) 640px, (max-width: 1280px) 1280px, 2880px"
+      />
+      <img
+        src="{{ $jpeg_lg.RelPermalink }}"
+        srcset="{{ $jpeg_sm.RelPermalink }} 640w, {{ $jpeg_lg.RelPermalink }} 1280w, {{ $jpeg_xl.RelPermalink }} 2880w"
+        sizes="(max-width: 640px) 640px, (max-width: 1280px) 1280px, 2880px"
+        alt="description"
+      />
+    </picture>
   </a>
 {{ else }}
   {{ if .Text }}
