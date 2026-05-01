@@ -5,8 +5,8 @@
       <a href="{{ .link }}" class="masonry-item">
         <div>
           {{ with resources.Get .file }}
-            {{ $webp := .Resize "900x webp" }}
-            {{ $jpeg := .Resize "900x jpeg" }}
+            {{ $webp := .Resize "640x webp q75" }}
+            {{ $jpeg := .Resize "640x jpeg q60" }}
             <picture>
               <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
               <img src="{{ $jpeg.RelPermalink }}" alt="alt">
