@@ -15,45 +15,48 @@ imaging:
     useSharpYuv: true
 params:
   featured:
-    - name: Key Arena, as it was formerly known
-      file: 2024-07-16/converted/000011720023.jpg
-      link: archive/20240716-2/
+    - name: Goat Rocks
+      file: 2026-06-09_1/converted/DSCF3713-3.jpg
+      link: /
+    - name: Fence along the shoreline of chuckanut bay
+      file: 2026-06-09_1/converted/DSCF3755-3.jpg
+      link: /
     - name: Beach looking out to sea
-      file: 2024-07-03_1/converted/000008890018.jpg
-      link: archive/20240703-4/
+      file: 2026-06-09_1/converted/DSCF3711-3.jpg
+      link: /
+    - name: Crank
+      file: 2026-06-09_1/converted/DSCF3715-3.jpg
+      link: /
+    - name: Man on park bench
+      file: 2026-06-09_1/converted/DSCF3742-3.jpg
+      link: /
+    - name: Self portrait on Black and White RA-4 reversal
+      file: 2026-06-09_1/converted/DSCF3747-3.jpg
+      link: /
+    - name: Dark pathway at Cemetary
+      file: 2026-06-09_1/converted/DSCF3741-3.jpg
+      link: /
+    - name: Obelesk
+      file: 2026-06-09_1/converted/DSCF3739-3.jpg
+      link: /
+    - name: Man doing peace sign at monorail
+      file: 2026-06-09_1/converted/DSCF3748-3.jpg
+      link: /
+    - name: Middlefork Snoqualmie River
+      file: 2026-06-09_1/converted/DSCF3740-3.jpg
+      link: /
+    - name: Fish in koi pond
+      file: 2026-06-09_1/converted/DSCF3744-3.jpg
+      link: /
     - name: Lily Basin in Goat rocks wilderness.
       file: 2024-08-09/converted/_DSC0017-2.jpg
       link: archive/20240809/
     - name: Sweet Pea dinghy
       file: 2024-07-16/converted/000011720029.jpg
       link: archive/20240716-2/
-    - name: The EMP
-      file: 2024-08-25/converted/_DSC0017.jpg
-      link: archive/20240825/
-    - name: Building on UBC campus
-      file: 2024-06-01/converted/_DSC6699.jpg
-      link: archive/20240601/
-    - name: Cliffside hotel Hokkaido
-      file: 2023-08-28/converted/_DSC1050.jpg
-      link: archive/20230828/
     - name: Roll tack
       file: 2021-10-11/converted/DSC01737.jpg
       link: archive/20211011/
-    - name: Grace in the library
-      file: 2023-11-14/converted/_DSC1491.jpg
-      link: archive/20231114/
-    - name: Fence along the shoreline of chuckanut bay
-      file: 2022-01-04/converted/DSC03814.jpg
-      link: archive/20220106/
-    - name: Scupture park picnic
-      file: 2022-07-10/converted/_DSC6546.jpg
-      link: archive/20220710/
     - name: Skull island shore
       file: 2022-05-03/converted/DSC05479.jpg
       link: archive/20220503/
-    - name: Fence along the shoreline of chuckanut bay
-      file: 2022-01-04/converted/DSC03814.jpg
-      link: archive/20220106/
-    - name: Cliffside in Hokkaido
-      file: 2023-08-24/converted/_DSC0933.jpg
-      link: archive/20230824/
