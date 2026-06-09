@@ -1,0 +1,57 @@
+{{ $img := .Page.Resources.Get .Destination }}
+{{ if not $img }}
+  {{ $img = resources.Get .Destination }}
+{{ end }}
+{{ if $img }}
+  {{ $webp_quality := "q75" }}
+  {{ if eq $img.MediaType.SubType "png" }}
+    {{ $webp_quality = "lossless" }}
+  {{ end }}
+
+  {{/* Only generate sizes smaller than the source */}}
+  {{ $jpeg_xl := $img }}
+  {{ $webp_xl := $img }}
+  {{ if gt $img.Width 2880 }}
+    {{ $jpeg_xl = $img.Resize "2880x jpeg q75" }}
+    {{ $webp_xl = $img.Resize (printf "2880x webp %s" $webp_quality) }}
+  {{ end }}
+
+  {{ $jpeg_lg := $img }}
+  {{ $webp_lg := $img }}
+  {{ if gt $img.Width 1280 }}
+    {{ $jpeg_lg = $img.Resize "1280x jpeg q60" }}
+    {{ $webp_lg = $img.Resize (printf "1280x webp %s" $webp_quality) }}
+  {{ end }}
+
+  {{ $jpeg_sm := $img }}
+  {{ $webp_sm := $img }}
+  {{ if gt $img.Width 640 }}
+    {{ $jpeg_sm = $img.Resize "640x jpeg q60" }}
+    {{ $webp_sm = $img.Resize (printf "640x webp %s" $webp_quality) }}
+  {{ end }}
+  <a
+    style="text-decoration:none;"
+    href="{{ $img.RelPermalink }}">
+    <picture
+      class="rendered-image">
+      <source
+        type="image/webp"
+        srcset="{{ $webp_sm.RelPermalink }} 640w, {{ $webp_lg.RelPermalink }} 1280w, {{ $webp_xl.RelPermalink }} 2880w"
+        sizes="(max-width: 640px) 640px, (max-width: 1280px) 1280px, 2880px"
+      />
+      <img
+        src="{{ $jpeg_lg.RelPermalink }}"
+        srcset="{{ $jpeg_sm.RelPermalink }} 640w, {{ $jpeg_lg.RelPermalink }} 1280w, {{ $jpeg_xl.RelPermalink }} 2880w"
+        sizes="(max-width: 640px) 640px, (max-width: 1280px) 1280px, 2880px"
+        alt="description"
+        loading="lazy"
+      />
+    </picture>
+  </a>
+{{ else }}
+  {{ if .Text }}
+    <p>Sorry, {{ .Text }} failed to render.</p>
+  {{ else }}
+    <p>Sorry, Image failed to render.</p>
+  {{ end }}
+{{ end }}

@@ -5,12 +5,10 @@
       <a href="{{ .link }}" class="masonry-item">
         <div>
           {{ with resources.Get .file }}
-            {{ $webp := .Resize "900x webp" }}
-            {{ $avif := .Resize "900x avif" }}
-            {{ $jpeg := .Resize "900x jpeg" }}
+            {{ $webp := .Resize "640x webp q75" }}
+            {{ $jpeg := .Resize "640x jpeg q60" }}
             <picture>
               <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-              <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
               <img src="{{ $jpeg.RelPermalink }}" alt="alt">
             </picture>
           {{ end }}
@@ -18,28 +16,20 @@
       </a>
     {{ end }}
   </section>
-  {{ partial "tags.html" . }}
-  <section class="masonry-container">
-    {{ range (.Paginate (.GetPage "posts").Pages.ByDate.Reverse 20).Pages }}
-      <a href="{{ .RelPermalink }}" class="masonry-item">
-        <div>
-          <div>
-            <h5>{{ .Title }}</h5>
-            <h6>{{ .Date.Format "Monday, January 2, 2006" }}</h6>
-          </div>
-          {{ $title := .Title }}
-          {{ with resources.Get (index .Params.images 0) }}
-            {{ $webp := .Resize "900x webp" }}
-            {{ $avif := .Resize "900x avif" }}
-            {{ $jpeg := .Resize "900x jpeg" }}
-            <picture>
-              <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-              <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
-              <img src="{{ $jpeg.RelPermalink }}" alt="Preview Image for {{ $title }}.">
-            </picture>
-          {{ end }}
-        </div>
+  <section>
+    <h3>Recent Posts</h3>
+    {{ range (.Paginate (.GetPage "post").Pages.ByDate.Reverse 10).Pages }}
+      <a href="{{ .RelPermalink }}">
+        <h4>
+          <mark class="subtext">{{ .Date.Format "January 2, 2006" }}</mark> {{ .Title }}
+        </h4>
       </a>
+    {{ end }}
+  </section>
+  <section class="tags">
+    <h3>Tags</h3>
+    {{ range .Site.Taxonomies.tags.ByCount }}
+      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
     {{ end }}
   </section>
 {{ end }}
