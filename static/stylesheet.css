@@ -110,6 +110,16 @@ mark.subtext {
   color: darkgrey;
 }
 
+/* Table styles */
+table,tr,td,th {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 1mm 2mm;
+}
+table tr:nth-child(2n),th {
+  background-color: whitesmoke;
+}
+
 /* Section styles */
 section p {
   max-width: 40rem;

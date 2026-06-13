@@ -3,7 +3,7 @@ title: "Website Refresh and 2026 Goals"
 publishdate: 2026-04-23T15:32:20-07:00
 date: 2026-04-23T15:32:20-07:00
 tags:
-  - Development
+  - development
 draft: false
 ---
 
