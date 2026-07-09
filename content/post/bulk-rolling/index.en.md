@@ -10,35 +10,35 @@ draft: false
 
 ![Ektachrome 100 Can](e100-can.jpg)
 
-*Bulk Rolling* refers to taking a length of 35mm film, attaching, rolling, and cutting into a standard 35mm cassette for use in a stills camera. The history of this dates back to the first 35mm camera made by Oskar Barnack in 1913. He took the already standard 35mm format from cinema film and expanded the image to fit horizontally on the film base. Rolling or spooling down existing cinema film was the source of this format, and the act of cutting down cinema film can still be done today with the right tools.
+*Bulk Rolling* refers to taking a length of 35mm film, attaching, rolling, and cutting into a standard 35mm cassette.. This practice dates back to the first 35mm camera made by inventor Oskar Barnack in 1913, who revolutionized the standard 35mm format from cinema film and expanded the image to fit horizontally on the film base. Cinema film can still be cut down today with the right tools.
 
-### Reasons to bulk roll film
+### Why Bulk Roll?
 
-There are three main reasons you would want to choose to roll your own film instead of buying a pre-packed 36 or 24 exposure 35mm cassette.
+There are three main reasons to roll your own film instead of buying a pre-packed 36 or 24 exposure 35mm cassette:
 
 1. Cheaper per-roll cost
 2. Custom length roll (1 - ~40 frames)
 3. The film you want is only available in longer rolls
 
-While all of these things are possible, 1, cheaper per-roll cost, is not always true. After you aquire the tools and materials it can sometimes not be worth the cost savings.
+While all of these things are possible, the tools and materials can sometimes exceed the savings.
 
-### Reasons you shouldn't bulk roll film
+### Why NOT to Bulk Roll?
 
-Bulk rolling is not all sunshine and rainbows; ruining a 100ft roll of film due to improper light-safe techniques is entirely possible. Although this is the most common fear, there are many more reasons you can find bulk rolling troublesome:
+Bulk rolling isn’t all sunshine and rainbows. Ruining a 100ft roll of film due to improper light-safe techniques is entirely possible. Although this is the most common fear, there are many more reasons bulk rolling can be troublesome:
 
 - Worn cassettes cause light leaks
-- Improper loading leading to loss of final frame on roll
+- Improper loading leading to the loss of the final frame on the roll
 - Fingerprints on the film caused by manual loading
 - Missing sprocket holes from bad rolling tools causing camera lock-up
 - Damaged film from bulk rolling tools
 - Image artifacts from stress on the film during loading
-- Camera fails to pickup the film due to improperly cut leader
+- Camera fails to pick up the film due to an improperly cut leader
 
-Wow! Why am I even doing this if so many things can go wrong? Well, if you're already shooting film, you should start to expect a long list of dos and don'ts from existing literature on the subject. My hope in this guide is to pass on my experience bulk rolling film and the habits and rituals I use to avoid all of these problems.
+Wow! Why am I even doing this if so many things can go wrong? Well, if you’re already shooting film, you should start to expect a long list of dos and don’ts from existing literature on the subject. My hope in this guide is to pass on my experience bulk rolling film and the habits and rituals I use to avoid all of these problems.
 
 ### Materials Needed
 
-This section title is a misnomer. *Needed* is a relative term. You could theoretically take a 100ft length of film, a used cassette, and a piece of Scotch tape and curl up under a thick blanket in a bathtub with the door closed and spool the film onto the cassette, then rip the film with your teeth. So, in that case, your needed materials would literally just be Scotch tape and some level of desperation. But, just as I keep spending my retirement fund on cameras and lenses I don't need, sometimes there are things in life that make it easier and more enjoyable to do things. As such, these sections are relatively ordered in the necessity of the item required to bulk roll film. I suggest setting a budget and then buying whatever is within that.
+This section title is a misnomer. *Needed* is a relative term. You could theoretically take 100ft of film, a used cassette, and a piece of tape and curl up under a thick blanket in a bathtub with the door closed and spool the film onto the cassette, then rip the film with your teeth. In that case, you only need Scotch tape and a dream.. But, just as I keep spending my retirement fund on cameras and lenses I don’t need, sometimes there are things in life that make it easier and more enjoyable to do things. As such, these sections are relatively ordered in the necessity of the items required to bulk roll film. I suggest setting a budget and then buying whatever is within that.
 
 ### Basic Consumables
 
@@ -46,22 +46,22 @@ This section title is a misnomer. *Needed* is a relative term. You could theoret
 
 ![Six Film Cassettes](film-cassettes.jpg)
 
-The best source of these will always be ones that have only been used once and are made from metal by a reputable film company such as Ilford or Kodak. If you develop at home, you should have these laying around, or if you get your film developed at a lab, you can usually ask for the empty ones they're going to throw away or recycle.
+The best film cassettes are metal, have only been used once, and are made by a reputable film company, such as Ilford or Kodak. If you develop at home, you should have these lying around, or if you get your film developed at a lab, you can usually ask for extra empty cassettes.
 
-The **most important quality** these used cassettes need is the correct amount of film sticking out to attach the fresh film from your bulk roll. If it is too short, you risk damaging the felt or having it detach when you reach the end of your roll in the camera.  If it is too long, you will lose frames as the end of your roll as you will unknowingly wind the exposed and already used film in front of the shutter.
+The most important quality of used cassettes is the correct amount of film protruding to attach the fresh film. If it is too short, you risk damaging the felt or having it detach when you reach the end of your roll. If it is too long, you will lose frames at the end of your roll as you will unknowingly wind the exposed film in front of the shutter.
 
-You can determine the correct length of film needed by setting the cassette in the back of your camera (if it's an SLR with an open back loading system), then pulling the film until it's tight and seeing how close to the shutter the film gets. It should not be so long that it's within one inch of the shutter.  It should also not be so short that half the width of the tape you're using is within 2-4mm of the felt light seal.
+You can determine the correct length of film needed by setting the cassette in the back of your camera (if it’s an SLR with an open back loading system), then pulling the film until it’s tight and observing the proximity to the shutter. The film should be at least a half inch from the shutter. It should also not be so short that half the width of the tape you’re using is within 2-4mm of the felt light seal.
 
 ![Film Cassettes loaded into both an SLR and a Rangefinder](film-in-camera.jpg)
 
 TLDR: The protruding film should be around 3/4 of an inch or 2 cm from the felt light seal on your cassette.
 
-Used cassettes can be had for free in Seattle, with proper length, from:
+Used cassettes can be found for free in Seattle, with proper length, from:
 
 - Panda Lab
 - Shot on Film
 
-The other option is to use ready-to-use bulk loading cassettes.  These are the most common models:
+The other option is to use ready-to-use bulk loading cassettes. These are the most common models:
 
 
 | Cassette                                                                                                                                            | Avg. Cost per Cassette |
@@ -76,15 +76,15 @@ The other option is to use ready-to-use bulk loading cassettes.  These are the m
 
 *†No longer in production, can be found used.*
 
-I have used all of these except the "Russian" ones.  Both of the plastic ones gave me horrible light leaks on my first, but always seconds roll of film.  The snap caps are great but usually cost between 3-5$ a cassette which, when compared to free used ones, is a horrible deal.
+I have used all of these except the “Russian” ones. Both types of plastic cassettes succeeded in their first use, but had light leaks on any further uses. The snap caps are great, and more durable, but usually cost between $3-5 a cassette which, when compared to free used ones, is a horrible deal.
 
-You will find purpose build reloadable cassettes by Leica and Nikon. Do not be deceived, these are for specific cameras and are known to mangle film anyway.
+You will find reloadable cassettes by Leica and Nikon but do not be deceived: these are for specific cameras and are known to mangle film anyway.
 
 #### Tape
 
 Really? Tape matters? Yes.
 
-I started out a naive bulk loader using my finest gaffers tape on one side of my film connecting to the leader from the empty roll.  **This is a critical mistake**, gaffer tape, duct tape, or any cloth tape is too thick to fit 36 exposures onto a roll. Any thin film tape will be fine, I use the scotch gift wrapping tape I had in my office supply drawer. For best adhesion apply the tape parallel to the seam between the film and the leader so that you can wrap the edges and tape both sides with one piece.
+I started out a naive bulk loader using my finest gaffers tape on one side of my film connecting to the leader from the empty roll. This is a critical mistake. Gaffer tape, duct tape, or any cloth tape is too thick to fit 36 exposures onto a roll. Any thin film tape will be fine. I use the Scotch gift wrapping tape. For best adhesion, apply the tape parallel to the seam between the fresh film and the film in the cassette so that you can wrap the edges and tape both sides with one piece.
 
 ![Thin tape for taping film to cassette](tape.jpg)
 
@@ -98,28 +98,25 @@ No tricks here, as long as you can cut some small curves (for a leader) it shoul
 
 #### Daylight Loader
 
-Daylight loaders come in very different sizes and shapes with many different features. They all have their own problems and this is no clear winner.
+Daylight loaders come in very different sizes and shapes with many different features. They all have their own problems and there is no clear winner.
 
-Do I really need a daylight loader? Probably, it's the main piece of gear for this process and where the greatest amount of your bulk loading budget should be spent the first time. I recommend taking the amount of film you have shot in the past and using that to determine how much to spend.  Here's what I did:
+Do I really need a daylight loader? Probably. It’s the main piece of gear for this process and where the greatest amount of your bulk loading budget should be spent. Take the amount of film you have shot recently and use that to determine how much to spend. Here’s what I did:
 
-I shot 78 rolls in the past 2 1/2 years.
-16 of those were Kodak Gold 200
-~30 were black and white Ilford films
-I could replace those 30 and 16 with 2 and 1 100' rolls of color and black and white film, probably more if I stopped buying every cool looking film stock at Glazers.
+I shot seventy eight rolls in the past 2.5 years. sixteen of those were Kodak Gold 200, and thirty were black and white Ilford films. I could replace those thirty and sixteen with two 100’ rolls of color and one 100’ black and white film, probably more if I stopped buying every cool-looking film stock at Glazers. To cover my film needs I would need five 100’ rolls of bulk film, as there are eighteen rolls in 100’.
 
-So ~5 100' rolls
+I can calculate the cost of my bulk roller in a year per roll as 5 *** 18 (rolls per 100')
 
-So I can calculate the cost of my bulk roller in a year per roll as 5 *** 20 (rolls per 100')
-
-So if I spent $120 on my bulk loader that's $1.20/roll which is usually half of the cost savings you'd get by bulk rolling (more on that later). *Probably not worth it.*
+If I spent $120 on my bulk loader that’s $1.33/roll which is usually half of the cost savings you’d get by bulk rolling (more on that later). *Probably not worth it.*
 
 ### Film Available
 
 Finding bulk film can be challenging, but can be separated into three distinct categories.
 
-#### Commercial Still Film
+#### Commercial Photo Film
 
-Usually only found in back & white, most film manufacturers sell their regular stills film in bulk rolls, with a few notable exceptions. The notable exception being Kodak; after their last bankruptcy they gave the rights to sell still film in bulk to Kodak-Alaris. Kodak Eastman has recently been releasing their film direct from the factory so the possibility is higher than ever, but since the margins are lower, still unlikely. Here's a list of what I could find. I prefer linking to my local film store, Glazer's which has limited stock, or wherever seems the cheapest. I have also omitted some weird listings on BHPhoto that look similar to the respooled Foma film, except the Arista EDU as freestyle imports it in bulk and sells below the Foma price point here in the US.
+Most film manufacturers sell most of their catalog in bulk rolls, with the notable exception of Kodak. After their last bankruptcy they gave the rights to sell photo film in bulk to Kodak Alaris, a private equity holding company. Kodak Alaris has been only selling the film with the intention of the highest profit margins in low volume, discontinuing all bulk color film. Similarly, Ilford’s new color films are produced in small batches and not sold in bulk.
+
+I have provided links to my local film store, Glazer’s which has limited stock, or wherever seems the cheapest. I have also omitted some weird listings on BHPhoto that look similar to respooled Foma film, except the Arista EDU as freestyle imports it in bulk and sells below the Foma price point here in the US.
 
 **Prices as of 6/12/2026**, All 100ft.
 
@@ -149,25 +146,25 @@ Usually only found in back & white, most film manufacturers sell their regular s
 
 *B&W TG refers to Tabular Grain emulsions.*
 
-The elephant in the room is that there is little to no color film stocks in this list. C41 color film is the most sought after 35mm available for casual photographers. The solution to this is to remember back to the history of film stocks, cinema film.
+The elephant in the room is that there is little to no color film stocks in this list. C41 color film is the most sought after 35mm film available for casual photographers. The solution to this is to remember back to the history of film stocks, cinema film.
 
 #### Cinema Film
 
-Cinema film (super 35/35mm) is still being used in movies and manufactured by Eastman Kodak. The modern emulsion has many differnences from modern still film due to the speed and stress cinema film gets shooting nearly an half a roll per second (4-perf). The main diffrences:
+Cinema film (super 35/35mm) is still being used in movies and manufactured by Eastman Kodak. The cinema film has many differences from modern phpto film due to the speed and stress cinema film experiences. Cinema film is shoot at nearly half a roll per second (4-perf). The main differences between cinema and photo film are:
 
 ##### ECN-2 vs C41 Color development.
 
-ECN-2 Uses a different color developer than C41 but they can be interchanged with some consequences. Generally ECN-2 film developed in C41 chemistry with slight color changes and a boost in contrast. From the data sheets, the bleach and fix are the same.
+ECN-2 Uses a different color developer than C41 but they can be interchanged with some consequences. Generally ECN-2 film can be developed in C41 chemistry with slight color changes and a boost in contrast. From the data sheets, the bleach and fix are the same.
 
-ECN-2 also replaces the anti-halation layer of the film stock present on the back of the film with a layer called rem-jet that serves the same purpose but also includes carbon. This carbon interferes with the development process but also lubricates the inside of cinema cameras. Modern cinema film as of November 2025 is no longer manufactured with this backing, but can still be found for sale with the same SKU as the more modern "AHU Undercoat". This layer can easily be removed with an ECN-2 pre-bath during development at home. Recipes usually contain cheap lye and can be sourced from Flic-Film. I have used this method without issue for years.
+ECN-2 also replaces the anti-halation layer on the back of the film stock with a layer called rem-jet. Rem-jet removes halations but also includes carbon designed to lubricate the inside of a cinema camera. This carbon interferes with the C41 development process if not removed. Kodak’s most recent cinema film, as of November 2025, is no longer manufactured with this backing. Rem-jet has been replaced with a “AHU Undercoat” similar to photo film. Rem-jet coated cinema film can still be found for sale with the same SKU as the more modern “AHU Undercoat”. Rem-jet can easily be removed with an ECN-2 pre-bath during development at home. Recipes usually contain cheap lye and can be sourced from Flic-Film. I have used this method without issue for years.
 
-Kodak's modern color negative film stocks are considered by many far superior to almost all consumer still emulsions. In testing I have read that it can reproduce higher sharpness than Ektar 100 in 50D and more dynamic range than UltraMax 400 and Portra 400 even in its 500 speed form.
+Kodak’s modern color negative film stocks are considered by many superior to almost all photo film. In my experiance it can reproduce higher sharpness than Ektar 100 in 50D and more dynamic range than UltraMax 400 and Portra 400 in 500T.
 
 ##### Getting Cinema Film
 
-This is hard. Really hard. Eastman Kodak sells cinema film directly to the consumer via a mail order (email) system that requires sales VP approval for all 35mm and 65mm film (8mm and 16mm are exempt from this process). And is only sold in 1,000' and 400' rolls.
+This is hard. Really hard. Eastman Kodak sells cinema film directly to the consumer via a mail order (email) system that requires sales VP approval for all 35mm and 65mm film (8mm and 16mm are exempt from this process). And is only sold in 1,000’ and 400’ rolls.
 
-Sometimes there are pre-cut 100" rolls available, I have purchased some from Ultrafine online and Atlanta Film Co. I would not recommend Atlanta Film Co.as it took them 2 months to fulfill my order.
+Sometimes there are pre-cut 100’ rolls available. I have purchased some from Ultrafine online and Atlanta Film Co. I would not recommend Atlanta Film Co as it took them over 2 months to fulfill my order.
 
 ##### Bulk Rolls of Color Negative Cinema Film
 
@@ -190,7 +187,7 @@ Sometimes there are pre-cut 100" rolls available, I have purchased some from Ult
 
 ##### Bulk Rolls of Black and White and Color Reversal Cinema Film
 
-Now, this is where the largest savings are. A little known fun fact is that both Tri-X 400's cousin, XX, and E100 are both available from Eastman Kodak's Motion Picture catalog.
+Now, this is where the largest savings are. A little known fun fact is that both Tri-X 400’s cousin, Double-X, and Ektachrome 100 are both available from Eastman Kodak’s Motion Picture catalog.
 
 | Film                  | Type                   | ISO  | Length | Price  | Cost per roll (USD) | Savings (USD)     |
 | --------------------- | ---------------------- | ---- | ------ | ------ | ------------------- | ----------------- |
@@ -236,7 +233,7 @@ This section is meant to have some broad suggestions, read the manual for your b
 ![Tape on cassette](step-1.jpg)
 3. Place the film from your loader carefully on top of the edge of tape, ensuring they are aligned and paralell.
 ![Fresh film on tape, aligned with film in cassette](step-2.jpg)
-4. Fold the tape over the edge of the fiml being careful to not leave any extra.
+4. Fold the tape over the edge of the film being careful to not leave any extra.
 ![Tape foleded over top and bottom of both pieces of film](step-3.jpg)
 5. Spool your cassette and cut it from the bulk loader. Be sure the loader is closed to the light for this step.
 ![Spooled and cut film.](step-4.jpg)
