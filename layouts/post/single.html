@@ -2,6 +2,7 @@
   <header>
     <h2>{{ .Title }}</h2>
   </header>
-  <h5>{{ .Page.Date.Format "Monday, January 2, 2006" }}</h5>
+  <p>by <a href="{{ .Site.BaseURL | relLangURL }}">Harry Saliba</a></p>
+  <p>{{ .Page.Date.Format "Monday, January 2, 2006" }}</p>
   {{ .Content }}
 {{ end }}

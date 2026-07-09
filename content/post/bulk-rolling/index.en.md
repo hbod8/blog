@@ -1,7 +1,7 @@
 ---
 title: "Bulk Rolling 35mm Film"
-publishdate: 2026-06-12T14:08:59-07:00
-date: 2026-06-12T14:08:59-07:00
+publishdate: 2026-07-08
+date: 2026-07-08
 tags:
   - 35mm
   - film
