@@ -50,12 +50,7 @@ resource "aws_route53_record" "www_redirect_ipv6" {
   }
 }
 
-# ---------------------------------------------------------------------------
-# Non-website records carried over from the previous DNS host (Hover). Mail
-# for the domain is hosted by Fastmail; if these are missing when the
-# registrar's nameservers switch to this zone, email delivery and DKIM
-# signing break immediately.
-# ---------------------------------------------------------------------------
+# Mail is hosted by Fastmail; removing these breaks delivery and DKIM.
 
 resource "aws_route53_record" "mx" {
   zone_id = aws_route53_zone.site.zone_id

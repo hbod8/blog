@@ -1,10 +1,8 @@
 name: Build
 
 on:
-  # Merge check - the `build` job is the required status check on main.
   pull_request:
     branches: [main]
-  # Every PR merge.
   push:
     branches: [main]
 
@@ -15,12 +13,8 @@ concurrency:
 env:
   HUGO_VERSION: 0.165.0
 
-# Build check only - there is no deploy step. The archive photos live on a
-# local drive (the `assets` symlink), not in git, so a runner can't produce
-# the real site. Templates and content still build without them
-# (resources.Get just returns nil for the missing images), which is enough to
-# catch broken layouts and front matter before merge. Deploys are run locally
-# with `hugo deploy`; see terraform/TERRAFORM.md.
+# Build check only. The archive photos aren't in git, so deploys run locally
+# (see terraform/TERRAFORM.md).
 jobs:
   build:
     name: build
@@ -31,8 +25,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # `extended` matches the local Homebrew toolchain. The withdeploy
-      # variant isn't needed since nothing is deployed from here.
       - name: Install Hugo
         run: |
           mkdir -p "$RUNNER_TEMP/hugo"
@@ -43,9 +35,7 @@ jobs:
       - name: Show Hugo version
         run: hugo version
 
-      # The checked-out `assets` symlink dangles on the runner; replace it
-      # with an empty directory so Hugo treats it as an ordinary empty assets
-      # dir.
+      # The `assets` symlink points at a local drive.
       - name: Stub out local-only assets
         run: rm assets && mkdir assets
 

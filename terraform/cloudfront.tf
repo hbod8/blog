@@ -9,10 +9,6 @@ resource "aws_acm_certificate" "site" {
   }
 }
 
-# These land in the new Route 53 zone, but until the registrar's nameservers
-# point at that zone ACM can't see them. During the migration the same
-# records are added by hand at the current DNS host (see TERRAFORM.md and the
-# acm_validation_records output) so the certificate validates before cutover.
 resource "aws_route53_record" "cert_validation" {
   for_each = {
     for dvo in aws_acm_certificate.site.domain_validation_options : dvo.domain_name => {

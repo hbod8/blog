@@ -19,19 +19,8 @@ output "cloudfront_distribution_id" {
 }
 
 output "cloudfront_domain_name" {
-  description = "CloudFront distribution domain name. Serves the site before DNS cutover, for testing."
+  description = "CloudFront distribution domain name"
   value       = aws_cloudfront_distribution.site.domain_name
-}
-
-output "acm_validation_records" {
-  description = "CNAMEs to add at the current DNS host so the certificate validates before nameservers move to Route 53"
-  value = {
-    for dvo in aws_acm_certificate.site.domain_validation_options : dvo.domain_name => {
-      name  = dvo.resource_record_name
-      type  = dvo.resource_record_type
-      value = dvo.resource_record_value
-    }
-  }
 }
 
 output "route53_zone_id" {

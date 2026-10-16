@@ -6,9 +6,7 @@ deployment:
   targets:
   - name: default
     url: s3://harrysaliba.com?region=us-west-2
-    # invalidate the CDN after upload, otherwise changes sit behind the
-    # CloudFront cache until the TTL expires. Value comes from
-    # `terraform -chdir=terraform output -raw cloudfront_distribution_id`.
+    # from `terraform -chdir=terraform output -raw cloudfront_distribution_id`
     cloudFrontDistributionID: E3GD31GTRZNTW9
 googleAnalytics: G-MLW1QLZ5BD
 taxonomies:
