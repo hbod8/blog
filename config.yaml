@@ -13,6 +13,16 @@ imaging:
     hint: photo
     method: 6
     useSharpYuv: true
+  outputs:
+  home:
+  - html
+  section:
+  - html
+  - rss
+  taxonomy:
+  - html
+  term:
+  - html
 params:
   featured:
     - name: Goat Rocks

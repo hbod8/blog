@@ -1,6 +1,6 @@
 ---
 title: ""
-publishdate: {{ .Date }}
+publishdate: {{ .Date.Format }}
 date: {{ .Date }}
 tags:
 #  - foo
