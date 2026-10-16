@@ -9,7 +9,7 @@ deployment:
     # invalidate the CDN after upload, otherwise changes sit behind the
     # CloudFront cache until the TTL expires. Value comes from
     # `terraform -chdir=terraform output -raw cloudfront_distribution_id`.
-    cloudFrontDistributionID: SET_AFTER_TERRAFORM_APPLY
+    cloudFrontDistributionID: E3GD31GTRZNTW9
 googleAnalytics: G-MLW1QLZ5BD
 taxonomies:
   tag: tags
