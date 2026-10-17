@@ -2,3 +2,12 @@
 public
 resources
 **/.DS_Store
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+tfplan*
+# .terraform.lock.hcl is intentionally NOT ignored - commit it to pin
+# provider versions.

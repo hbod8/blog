@@ -1,7 +1,13 @@
-baseURL: ""
+baseURL: https://harrysaliba.com/
 languageCode: en-us
 title: Harry Saliba
 timeout: 10m
+deployment:
+  targets:
+  - name: default
+    url: s3://harrysaliba.com?region=us-west-2
+    # from `terraform -chdir=terraform output -raw cloudfront_distribution_id`
+    cloudFrontDistributionID: E3GD31GTRZNTW9
 googleAnalytics: G-MLW1QLZ5BD
 taxonomies:
   tag: tags
@@ -13,7 +19,7 @@ imaging:
     hint: photo
     method: 6
     useSharpYuv: true
-  outputs:
+outputs:
   home:
   - html
   section:
