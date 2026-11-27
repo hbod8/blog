@@ -1,0 +1,18 @@
+#!/bin/sh
+# Spell-check staged content files. Enable once per clone:
+#   git config core.hooksPath .githooks
+# Install codespell with: brew install codespell
+
+if ! command -v codespell >/dev/null 2>&1; then
+  echo "pre-commit: codespell not installed (brew install codespell); skipping." >&2
+  exit 0
+fi
+
+files=$(git diff --cached --name-only --diff-filter=ACM -- 'content/*.md')
+[ -z "$files" ] && exit 0
+
+# shellcheck disable=SC2086
+echo "$files" | tr '\n' '\0' | xargs -0 codespell --ignore-words=.codespell-ignore
+status=$?
+[ $status -ne 0 ] && echo "pre-commit: spelling errors above (bypass with --no-verify)." >&2
+exit $status
