@@ -1,5 +1,6 @@
 #!/bin/sh
-# Spell-check staged content files. Enable once per clone:
+# Spell-check staged content files, auto-fixing unambiguous typos.
+# Enable once per clone:
 #   git config core.hooksPath .githooks
 # Install codespell with: brew install codespell
 
@@ -11,8 +12,22 @@ fi
 files=$(git diff --cached --name-only --diff-filter=ACM -- 'content/*.md')
 [ -z "$files" ] && exit 0
 
-# shellcheck disable=SC2086
+# Only auto-fix files with no unstaged changes, so re-staging can't sweep in
+# partial edits (git add -p). The rest are checked but not rewritten.
+fixable=""
+for f in $files; do
+  git diff --quiet -- "$f" && fixable="$fixable
+$f"
+done
+
+if [ -n "$fixable" ]; then
+  echo "$fixable" | sed '/^$/d' | tr '\n' '\0' \
+    | xargs -0 codespell -w --ignore-words=.codespell-ignore >/dev/null
+  echo "$fixable" | sed '/^$/d' | tr '\n' '\0' | xargs -0 git add --
+fi
+
+# Anything left is ambiguous or in a partially staged file.
 echo "$files" | tr '\n' '\0' | xargs -0 codespell --ignore-words=.codespell-ignore
 status=$?
-[ $status -ne 0 ] && echo "pre-commit: spelling errors above (bypass with --no-verify)." >&2
+[ $status -ne 0 ] && echo "pre-commit: unfixed spelling errors above (bypass with --no-verify)." >&2
 exit $status

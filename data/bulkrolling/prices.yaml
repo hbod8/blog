@@ -1,0 +1,502 @@
+# Price tracking data. See README.md for the schema; updated by scrape.lua.
+constants:
+  rolls_36exp:
+    bulk_100ft: 18
+    bulk_400ft: 72
+    roll_36exp: 1
+materials:
+  - name: "Flic-Film 2 piece plastic bulk loading cassettes (5 pack)*"
+    supplier: "Glazer's"
+    count: 5
+    url: "https://www.glazerscamera.com/products/flic-35mm-bulk-cassettes-x5"
+    prices:
+      - date: 2026-11-27
+        usd: 11.99
+  - name: "Ultrafine plastic screw top cassettes"
+    supplier: "Adorama / Ultrafine"
+    count: 10
+    url: "https://www.ultrafineonline.com/10re35plcawi.html"
+    prices:
+      - date: 2026-11-27
+        usd: 24.95
+commerciallyavailible:
+  - name: "Kodak Tri-X 400"
+    type: "B&W"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/collections/35mm-film/products/kodak-tri-x-135x100"
+        prices:
+          - date: 2026-07-08
+            usd: 239.95
+          - date: 2026-11-27
+            usd: 239.95
+      roll_36exp:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/products/kodak-tri-x-400-135-36?_pos=1&_sid=e33d62c79&_ss=r&_su_rec=Di655WXrrU6dFCFo3Zoyz7V3Dw5OHKYqkEiZPIRC871fFyj2XTmVZ4DEbusMEnTu297yTDF2RLHDETd0FHaWpLCWCEWEEVwZDtFnNTerxCRw9C3S_sHx43XBgq1PQHMcZSmBmdkIXcYkCJRET_ojiiItdWNzAidEHmj6PRWAgECgn3OhclxwsWKMSWSn9g0m9Z3HQ_jcQT7plf8vGuzsF-wTzWF6m52Yhp_ZeGeoKjsTwaa8F7SJcmPTwdlw8SJZrEu5Vo4ZUpGIyYQQ4A-6k0QKS_AR91mUwGXlLd-OqeGozuHh9_EyjA4bCNpWY7uY1FTDz_jc95GA9COPuIUQz14YBiR0JZoPgSGZ1br8ACcU1JjMHmcEs8Ee5BfIWABORdSW3WCefdkTGXtGgnswCYpaWI5iZlBpKcT0ZYvJQXOOKwb9fOTjG_wuZAFV5choxyruekbQnVs2C15iIRG4lySCib3e&_su_rec_id=5b7d292b-494b-4fb9-8ef7-62d3c1ea14be-1795825649"
+        prices:
+          - date: 2026-11-27
+            usd: 10.25
+  - name: "Kodak T-Max 400"
+    type: "B&W TG"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/collections/35mm-film/products/t-max-400-35mmx100"
+        prices:
+          - date: 2026-07-08
+            usd: 199.95
+          - date: 2026-11-27
+            usd: 199.95
+      roll_36exp:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/products/kodak-t-max-400-135-36?_pos=1&_sid=b57dd0df3&_ss=r"
+        prices:
+          - date: 2026-11-27
+            usd: 12.95
+  - name: "Kodak T-Max 100"
+    type: "B&W TG"
+    iso: 100
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1976545-REG/kodak_8570541_0126_t_max_100_black_and.html"
+        prices:
+          - date: 2026-07-08
+            usd: 169.00
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/29124-USA/Kodak_8532848_TMX_135_36_T_Max_100.html"
+        prices:
+          - date: 2026-11-27
+            usd: 10.99
+  - name: "Ilford HP5+ 400"
+    type: "B&W"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/collections/35mm-film/products/ilford-hp5-plus-135x100"
+        prices:
+          - date: 2026-07-08
+            usd: 167.99
+          - date: 2026-11-27
+            usd: 167.99
+      roll_36exp:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/products/ilford-hp5-plus-135-36"
+        prices:
+          - date: 2026-11-27
+            usd: 9.99
+  - name: "Ilford FP4+ 125"
+    type: "B&W"
+    iso: 125
+    formats:
+      bulk_100ft:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/collections/35mm-film/products/fp4-plus-35mmx-100ft-roll"
+        prices:
+          - date: 2026-07-08
+            usd: 141.95
+          - date: 2026-11-27
+            usd: 141.95
+      roll_36exp:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/products/ilford-fp4-plus-135-36"
+        prices:
+          - date: 2026-11-27
+            usd: 11.99
+  - name: "Ilford Delta 100"
+    type: "B&W TG"
+    iso: 100
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/108312-REG/Ilford_1780598_Delta_100_Professional_35mm_100.html"
+        prices:
+          - date: 2026-07-08
+            usd: 168.99
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/108310-REG/Ilford_1780624_Delta_100_Professional_135_36_Black.html"
+        prices:
+          - date: 2026-11-27
+            usd: 15.99
+  - name: "Ilford Delta 400"
+    type: "B&W TG"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/24618-REG/Ilford_1765829_Delta_400_Professional_35mm_100.html"
+        prices:
+          - date: 2026-07-08
+            usd: 178.50
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/24624-REG/Ilford_1748192_Delta_400_Professional_135_36_Black.html"
+        prices:
+          - date: 2026-11-27
+            usd: 15.99
+  - name: "Ilford Delta 3200"
+    type: "B&W TG"
+    iso: 1000
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1899530-REG/ilford_1182417_delta_3200_professional_black.html"
+        prices:
+          - date: 2026-07-08
+            usd: 215.99
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/142802-REG/Ilford_1887710_Delta_3200_Professional_135_36_B_W.html"
+        prices:
+          - date: 2026-11-27
+            usd: 16.99
+  - name: "Ilford XP2 Super"
+    type: "B&W C41"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/153926-REG/Ilford_1839621_XP_2_Super_35mm_100.html"
+        prices:
+          - date: 2026-07-08
+            usd: 175.95
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/153916-REG/Ilford_1839575_XP_2_Super_135_36_B_W.html"
+        prices:
+          - date: 2026-11-27
+            usd: 16.99
+  - name: "Ilford Pan F+"
+    type: "B&W"
+    iso: 50
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/25308-REG/Ilford_1707814_Pan_F_Plus_35mm.html"
+        prices:
+          - date: 2026-07-08
+            usd: 160.99
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/25310-REG/Ilford_1707768_Pan_F_Plus_135_36.html"
+        prices:
+          - date: 2026-11-27
+            usd: 17.50
+  - name: "Kentmere Pan 400"
+    type: "B&W"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/collections/35mm-film/products/kentmere-b-w-400-35mm-100-feet"
+        prices:
+          - date: 2026-07-08
+            usd: 92.95
+          - date: 2026-11-27
+            usd: 102.99
+      roll_36exp:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/products/kentmere-b-w-400-35mm-36exp"
+        prices:
+          - date: 2026-11-27
+            usd: 8.49
+  - name: "Kentmere Pan 200"
+    type: "B&W"
+    iso: 200
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1887917-REG/kentmere_6015088_400_black_and_white.html"
+        prices:
+          - date: 2026-07-08
+            usd: 108.95
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1887914-REG/kentmere_6015055_400_black_and_white.html"
+        prices:
+          - date: 2026-11-27
+            usd: 8.49
+  - name: "Kentmere Pan 100"
+    type: "B&W"
+    iso: 100
+    formats:
+      bulk_100ft:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/collections/35mm-film/products/kentmere-b-w-100-35mm-100ft"
+        prices:
+          - date: 2026-07-08
+            usd: 102.99
+          - date: 2026-11-27
+            usd: 102.99
+      roll_36exp:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/products/kentmere-b-w-100-35mm-36exp"
+        prices:
+          - date: 2026-11-27
+            usd: 8.49
+  - name: "Arista EDU Ultra 400 (aka Fomapan 400)"
+    type: "B&W"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "Freestyle"
+        url: "https://www.freestylephoto.com/190410-Arista-EDU-Ultra-400-ISO-35mm-x-100-ft."
+        prices:
+          - date: 2026-07-08
+            usd: 89.99
+      roll_36exp:
+        supplier: "Freestyle"
+        url: "https://www.freestylephoto.com/190364-Arista-EDU-Ultra-400-ISO-35mm-x-36-exp.-METAL-CARTRIDGE"
+        prices:
+          - date: 2026-11-27
+            usd: 7.99
+  - name: "Arista EDU Ultra 200 (aka Fomapan 200)"
+    type: "B&W"
+    iso: 200
+    formats:
+      bulk_100ft:
+        supplier: "Freestyle"
+        url: "https://www.freestylephoto.com/190210-Arista-EDU-Ultra-200-ISO-35mm-x-100-ft."
+        prices:
+          - date: 2026-07-08
+            usd: 89.99
+      roll_36exp:
+        supplier: "Freestyle"
+        url: "https://www.freestylephoto.com/190362-Arista-EDU-Ultra-200-ISO-35mm-x-36-exp."
+        prices:
+          - date: 2026-11-27
+            usd: 7.99
+  - name: "Arista EDU Ultra 100 (aka Fomapan 100)"
+    type: "B&W"
+    iso: 100
+    formats:
+      bulk_100ft:
+        supplier: "Freestyle"
+        url: "https://www.freestylephoto.com/190110-Arista-EDU-Ultra-100-ISO-35mm-x-100-ft."
+        prices:
+          - date: 2026-07-08
+            usd: 84.99
+      roll_36exp:
+        supplier: "Freestyle"
+        url: "https://www.freestylephoto.com/190361-Arista-EDU-Ultra-100-ISO-35mm-x-36-exp."
+        prices:
+          - date: 2026-11-27
+            usd: 7.99
+  - name: "Rollei IR 400 (aka Aviphot 200, Rollei Superpan 200 and 400)"
+    type: "B&W IR"
+    iso: "400 (200)"
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1349023-REG/rollei_8104135_infrared_35mm_x_100.html"
+        prices:
+          - date: 2026-07-08
+            usd: 124.50
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1139495-REG/rollei_agfa_81040123_infrared_400_black_and.html"
+        prices:
+          - date: 2026-11-27
+            usd: 13.99
+  - name: "Opticolor Color 200 (by Orwo)"
+    type: "Color"
+    iso: 200
+    formats:
+      bulk_100ft:
+        supplier: "Optik Oldschool"
+        url: "https://www.optik-oldschool.com/products/opticolour-200-bulk-kit?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 168.00
+      roll_36exp:
+        supplier: "Optik Oldschool"
+        url: "https://www.optik-oldschool.com/products/opticolour-200?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 12.00
+  - name: "Kono Color 400 (by Orwo)"
+    type: "Color"
+    iso: 400
+    formats:
+      bulk_100ft:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1955628-REG/kono_kbr_cn400_color_400_35mm_color.html"
+        prices:
+          - date: 2026-07-08
+            usd: 219.99
+      roll_36exp:
+        supplier: "B&H Photo"
+        url: "https://www.bhphotovideo.com/c/product/1814095-REG/kono_kc400_kono_color_400_35.html"
+        prices:
+          - date: 2026-11-27
+            usd: 23.99
+cinema:
+  - name: "MotiPix Kodak 5219"
+    type: "Color Negative"
+    iso: "500T"
+    formats:
+      bulk_100ft:
+        supplier: "MotiPix"
+        url: "https://ultrafineonline.com/products/motipix-kodak-5219-35-mm-x-100-ft-motion-picture-ecn-2-process-film-500t"
+        prices:
+          - date: 2026-06-12
+            usd: 129.95
+          - date: 2026-11-27
+            usd: 159.95
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/800tungsten-c41-36exp-35mm-high-speed-color-negative-135?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+  - name: "MotiPix Kodak 5207"
+    type: "Color Negative"
+    iso: "250D"
+    formats:
+      bulk_100ft:
+        supplier: "MotiPix"
+        url: "https://ultrafineonline.com/collections/ultrafine-motipix/products/motipix-kodak-5207-35-mm-x-100-ft-ahu-motion-picture-ecn-2-process-film-250d"
+        prices:
+          - date: 2026-06-12
+            usd: 129.95
+          - date: 2026-11-27
+            usd: 179.95
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/400dynamic-35mm?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+  - name: "MotiPix Kodak 5213"
+    type: "Color Negative"
+    iso: "200T"
+    formats:
+      bulk_100ft:
+        supplier: "MotiPix"
+        url: "https://ultrafineonline.com/products/motipix-kodak-5213-35-mm-x-100-ft-motion-picture-ecn-2-process-film-200t"
+        prices:
+          - date: 2026-06-12
+            usd: 119.95
+          - date: 2026-11-27
+            usd: 139.95
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/400dynamic-35mm?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+  - name: "MotiPix Kodak 5203"
+    type: "Color Negative"
+    iso: "50D"
+    formats:
+      bulk_100ft:
+        supplier: "MotiPix"
+        url: "https://ultrafineonline.com/products/motipix-kodak-5203-35-mm-x-100-ft-motion-picture-ecn-2-process-film-50d"
+        prices:
+          - date: 2026-06-12
+            usd: 119.95
+          - date: 2026-11-27
+            usd: 139.95
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/50daylight-36exp-135-fine-grain-color-film-35mm-roll?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+  - name: "Kodak Vision3 5219"
+    type: "Color Negative"
+    iso: "500T"
+    formats:
+      bulk_400ft:
+        supplier: "Kodak"
+        prices:
+          - date: 2026-06-12
+            usd: 491.28
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/800tungsten-c41-36exp-35mm-high-speed-color-negative-135?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+  - name: "Kodak Vision3 5207"
+    type: "Color Negative"
+    iso: "250D"
+    formats:
+      bulk_400ft:
+        supplier: "Kodak"
+        prices:
+          - date: 2026-06-12
+            usd: 491.28
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/400dynamic-35mm?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+  - name: "Kodak Vision3 5213"
+    type: "Color Negative"
+    iso: "200T"
+    formats:
+      bulk_400ft:
+        supplier: "Kodak"
+        prices:
+          - date: 2026-06-12
+            usd: 491.28
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/400dynamic-35mm?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+  - name: "Kodak Vision3 5203"
+    type: "Color Negative"
+    iso: "50D"
+    formats:
+      bulk_400ft:
+        supplier: "Kodak"
+        prices:
+          - date: 2026-06-12
+            usd: 491.28
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/50daylight-36exp-135-fine-grain-color-film-35mm-roll?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 17.99
+cinemabonus:
+  - name: "Kodak Double-X 5222"
+    type: "B&W Negative"
+    iso: 250
+    formats:
+      bulk_400ft:
+        supplier: "Kodak"
+        prices:
+          - date: 2026-06-12
+            usd: 491.28
+      roll_36exp:
+        supplier: "CineStill"
+        url: "https://cinestillfilm.com/products/bwxx-double-x-36exp-135-black-and-white-motion-picture-negative-film?currency=USD"
+        prices:
+          - date: 2026-11-27
+            usd: 14.99
+  - name: "Kodak Ektachrome 100D"
+    type: "Color Reversal (Slide)"
+    iso: 100
+    formats:
+      bulk_400ft:
+        supplier: "Kodak"
+        prices:
+          - date: 2026-06-12
+            usd: 655.20
+      roll_36exp:
+        supplier: "Glazer's"
+        url: "https://www.glazerscamera.com/products/ektachrome-e100-135-36-slide"
+        prices:
+          - date: 2026-11-27
+            usd: 25.95
