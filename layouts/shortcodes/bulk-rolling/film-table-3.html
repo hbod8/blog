@@ -1,0 +1,16 @@
+{{- $d := hugo.Data.bulkrolling.prices -}}
+{{- if not $d -}}
+  {{- errorf "bulkrolling/prices.yaml missing" -}}
+{{- end -}}
+
+| Film | Type | ISO | Length | Price | Cost per roll (USD) | Savings (USD)     |
+| ---- | ---- | --- | ------ | ----- | ------------------- | ----------------- |
+{{- range $d.cinemabonus -}}
+{{- $400ftprice := (index (sort .formats.bulk_400ft.prices "date" "desc") 0).usd}}
+{{- $100ftprice := math.Div $400ftprice 4 -}}
+{{- $36expprice := (index (sort .formats.roll_36exp.prices "date" "desc") 0).usd}}
+{{- $ppr := math.Div $400ftprice $d.constants.rolls_36exp.bulk_400ft -}}
+{{- $savings := math.Mul (math.Sub $36expprice $ppr) $d.constants.rolls_36exp.bulk_100ft -}}
+{{- $savings400 := math.Mul (math.Sub $36expprice $ppr) $d.constants.rolls_36exp.bulk_400ft -}}
+{{ "\n" }}| {{- .name -}} | {{- .type -}} | {{- .iso -}} | 400 | {{- printf "%.2f" $400ftprice -}} | {{- printf "%.2f" $ppr -}} | {{- printf "%.2f" $savings400 }} ({{ printf "%.2f" $savings -}}) |
+{{- end -}}

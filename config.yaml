@@ -2,6 +2,8 @@ baseURL: https://harrysaliba.com/
 languageCode: en-us
 title: Harry Saliba
 timeout: 10m
+ignoreFiles:
+- /data/.*\.(md|lua)$
 deployment:
   targets:
   - name: default

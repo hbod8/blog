@@ -1,0 +1,24 @@
+{{- $d := hugo.Data.bulkrolling.prices -}}
+{{- if not $d -}}
+  {{- errorf "bulkrolling/prices.yaml missing" -}}
+{{- end -}}
+
+| Film | ISO | Length (ft) | Price | Cost per Roll (USD) | Savings (USD)   |
+| ---- | --- | ----------- | ----- | ------------------- | --------------- |
+{{- range $d.cinema -}}
+{{- if isset .formats "bulk_400ft" -}}
+{{- $400ftprice := (index (sort .formats.bulk_400ft.prices "date" "desc") 0).usd}}
+{{- $100ftprice := math.Div $400ftprice 4 -}}
+{{- $36expprice := (index (sort .formats.roll_36exp.prices "date" "desc") 0).usd}}
+{{- $ppr := math.Div $400ftprice $d.constants.rolls_36exp.bulk_400ft -}}
+{{- $savings := math.Mul (math.Sub $36expprice $ppr) $d.constants.rolls_36exp.bulk_100ft -}}
+{{- $savings400 := math.Mul (math.Sub $36expprice $ppr) $d.constants.rolls_36exp.bulk_400ft -}}
+{{ "\n" }}| {{- .name -}} | {{- .iso -}} | 400 | {{- printf "%.2f" $400ftprice -}} | {{- printf "%.2f" $ppr -}} | {{- printf "%.2f" $savings400 }} ({{ printf "%.2f" $savings -}}) |
+{{- else -}}
+{{- $100ftprice := (index (sort .formats.bulk_100ft.prices "date" "desc") 0).usd}}
+{{- $36expprice := (index (sort .formats.roll_36exp.prices "date" "desc") 0).usd}}
+{{- $ppr := math.Div $100ftprice $d.constants.rolls_36exp.bulk_100ft -}}
+{{- $savings := math.Mul (math.Sub $36expprice $ppr) $d.constants.rolls_36exp.bulk_100ft -}}
+{{ "\n" }}| {{- .name -}} | {{- .iso -}} | 100 | {{- printf "%.2f" $100ftprice -}} | {{- printf "%.2f" $ppr -}} | {{- printf "%.2f" $savings -}} |
+{{- end -}}
+{{- end -}}

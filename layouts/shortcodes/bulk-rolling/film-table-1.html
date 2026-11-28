@@ -1,0 +1,14 @@
+{{- $d := hugo.Data.bulkrolling.prices -}}
+{{- if not $d -}}
+  {{- errorf "bulkrolling/prices.yaml missing" -}}
+{{- end -}}
+
+| Film | Type | ISO | Link | Price (USD) | Price Per Roll (USD) | Savings (USD) |
+| ---- | ---- | --- | ---- | ----------- | -------------------- | ------------- |
+{{- range $d.commerciallyavailible -}}
+{{- $100ftprice := index (sort .formats.bulk_100ft.prices "date" "desc") 0}}
+{{- $36expprice := index (sort .formats.roll_36exp.prices "date" "desc") 0}}
+{{- $ppr := math.Div $100ftprice.usd $d.constants.rolls_36exp.bulk_100ft -}}
+{{- $savings := math.Mul (math.Sub $36expprice.usd $ppr) 18 -}}
+{{ "\n" }}| {{- .name -}} | {{- .type -}} | {{- .iso -}} | [{{- .formats.bulk_100ft.supplier -}}]({{- .formats.bulk_100ft.url -}}) | {{- printf "%.2f" $100ftprice.usd -}} | {{- printf "%.2f" $ppr -}} | {{- printf "%.2f" $savings -}} |
+{{- end -}}

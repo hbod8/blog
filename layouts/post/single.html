@@ -4,5 +4,8 @@
   </header>
   <p>by <a href="{{ .Site.BaseURL | relLangURL }}">Harry Saliba</a></p>
   <p>{{ .Page.Date.Format "Monday, January 2, 2006" }}</p>
+  {{ if .Params.lastmod }}
+    <p><em>Last modified: {{ .Params.lastmod.Format "Monday, January 2, 2006" }}</em></p>
+  {{ end }}
   {{ .Content }}
 {{ end }}
