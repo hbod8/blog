@@ -38,13 +38,14 @@
 html {
   font-family: "Arbutus Slab", sans-serif;
   font-size: 6mm;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 body {
   max-width: 40rem;
-  margin: 0;
-  float: left;
+  margin: 0 auto;
+  padding: 0 1rem;
+  /* float: left; */
 }
 
 /* Font styles */
@@ -254,7 +255,7 @@ section.pagination>.active-pager {
   margin-bottom: 0;
 }
 .rendered-image img {
-  width: 100%;
+  /* width: 100%; */
 }
 .rendered-image ~ small
 {
