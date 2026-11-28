@@ -418,6 +418,8 @@ cinema:
         prices:
           - date: 2026-06-12
             usd: 491.28
+          - date: 2026-11-27
+            usd: 356.00
       roll_36exp:
         supplier: "CineStill"
         url: "https://cinestillfilm.com/products/800tungsten-c41-36exp-35mm-high-speed-color-negative-135?currency=USD"
@@ -433,6 +435,8 @@ cinema:
         prices:
           - date: 2026-06-12
             usd: 491.28
+          - date: 2026-11-27
+            usd: 356.00
       roll_36exp:
         supplier: "CineStill"
         url: "https://cinestillfilm.com/products/400dynamic-35mm?currency=USD"
@@ -448,6 +452,8 @@ cinema:
         prices:
           - date: 2026-06-12
             usd: 491.28
+          - date: 2026-11-27
+            usd: 356.00
       roll_36exp:
         supplier: "CineStill"
         url: "https://cinestillfilm.com/products/400dynamic-35mm?currency=USD"
@@ -463,6 +469,8 @@ cinema:
         prices:
           - date: 2026-06-12
             usd: 491.28
+          - date: 2026-11-27
+            usd: 356.00
       roll_36exp:
         supplier: "CineStill"
         url: "https://cinestillfilm.com/products/50daylight-36exp-135-fine-grain-color-film-35mm-roll?currency=USD"
@@ -479,6 +487,8 @@ cinemabonus:
         prices:
           - date: 2026-06-12
             usd: 491.28
+          - date: 2026-11-27
+            usd: 356.00
       roll_36exp:
         supplier: "CineStill"
         url: "https://cinestillfilm.com/products/bwxx-double-x-36exp-135-black-and-white-motion-picture-negative-film?currency=USD"
@@ -494,6 +504,8 @@ cinemabonus:
         prices:
           - date: 2026-06-12
             usd: 655.20
+          - date: 2026-11-27
+            usd: 520.00
       roll_36exp:
         supplier: "Glazer's"
         url: "https://www.glazerscamera.com/products/ektachrome-e100-135-36-slide"
