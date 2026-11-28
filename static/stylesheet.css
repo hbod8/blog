@@ -289,6 +289,12 @@ section.pagination>.active-pager {
   section p {
     min-width: auto;
   }
+  table * {
+    font-size: .7rem;
+  }
+  tr,td,th {
+    padding: 0;
+  }
 }
 
 /* Smallest styles */
@@ -305,5 +311,11 @@ section.pagination>.active-pager {
   }
   section p {
     min-width: auto;
+  }
+  table * {
+    font-size: .7rem;
+  }
+  tr,td,th {
+    padding: .5mm 1mm;
   }
 }
